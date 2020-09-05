@@ -272,75 +272,47 @@ A =
 \begin{flushleft}
 \noindent
 Given equation A^2-5A +6I \\
+Splitting matrix as (A-3I)(A-5I) we have
 \begin{equation}
-A-\lambda I=
+A-3I=
 \begin{pmatrix}
-	2-\lambda & 0 &1 \\
-	2 & 1-\lambda &3\\
-	1 &-1 & 0-\lambda
+	2& 0 &1 \\
+	2 & 1 &3\\
+	1 &-1 & 0
+	 \\
+\end{pmatrix}
+\begin{pmatrix}
+	-3& 0 &0\\
+	0 & 0&3\\
+	0 &0 & -3
 	 \\
 \end{pmatrix}
 \end{equation}
-Solving  equation we have :
-\begin{align}
-\lambda^3 -3\lambda^2 +4\lambda -3=0\\
-A^3 -3A^2+4A=3\\
-A^2 -5A+6=3A^{-1}-2A+2 
-\end{align}
 \begin{equation}
- 3A^{-1}=
+A-5I=
 \begin{pmatrix}
-	3 & -1& -1 \\
-	3& -1 &-4\\
-	-3&2 & 2
+	2& 0 &1 \\
+	2 & 1&3\\
+	1 &-1 & 0
+\end{pmatrix}
+\begin{pmatrix}
+	-5& 0 &0\\
+	0& -5 & 0\\
+	0 &0 & -5
 \end{pmatrix}
 \end{equation}
-\begin{align}
--2A=
-\begin{pmatrix}
-	-4 & 0 & -2\\
-	-4 & -2 &-6\\
-	-2& 2 & 0
-\end{pmatrix}
-\end{align}
-\begin{equation}
-2I=
-\begin{pmatrix}
-	2 & 0& 0 \\
-	0 & 2 &0\\
-	0 &0 & 2
-	 \\	
-\end{pmatrix}
-\end{equation}
-Writing the equation by putting values we have:\\
-A^2 -5A+6I=3A^{-1}-2A+2\\
+Multiplying equation (2.0.1) and (2.0.3) we have:
+A^2 -5A +6I=
 \begin{equation}
 \begin{pmatrix}
-	3 & -1& -1 \\
-	3& -1 &-4\\
-	-3&2 & 2
+	-1 & 0 &1\\
+	2 & -2&3\\
+	1 &-1 &-3
 \end{pmatrix}
-+
 \begin{pmatrix}
-	-4 & 0 & -2\\
-	-4 & -2 &-6\\
-	-2& 2 & 0
-\end{pmatrix}
-	+
-\begin{pmatrix}
-	2 & 0& 0 \\
-	0 & 2 &0\\
-	0 &0 & 2
-	 \\	
-\end{pmatrix}
-\end{equation}
-Solving equation we have:
-A^2 -5A+6I=\\
-\begin{equation}
-\begin{pmatrix}
-	1 & -1 & -3\\
-	-1& -1 & -10\\
-	-5 & 4 &4
+	0& 0 &1\\
+	2 & -1&3\\
+	1 &-1 &-2
 \end{pmatrix}
 \end{equation}
 \end{flushleft}
