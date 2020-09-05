@@ -258,7 +258,7 @@ https://github.com/shivangi-975/EE5609-Matrix_Theory/blob/master/Assignment2/Ass
 \end{lstlisting}
 %
 \section{Problem 25}
-Find the value of equation A $^ {2}-5\times A +6\times I \\
+Find the value of equation A $^ {2}-5A +6I \\
 If
 %
 %	
@@ -271,67 +271,66 @@ A =
 \section{Solution}
 \begin{flushleft}
 \noindent
-Given equation A^2-5\times A +6\times I \\
+Given equation A^2-5A +6I \\
 \begin{equation}
-A^2=A\times A=
+A-\lambda I=
 \begin{pmatrix}
-	2 & 0 &1 \\
-	2 & 1 &3\\
-	1 &-1 & 0
-	 \\
-	
-\end{pmatrix}
-\begin{pmatrix}
-	2 & 0 &1 \\
-	2 & 1 &3\\
-	1 &-1 & 0
+	2-\lambda & 0 &1 \\
+	2 & 1-\lambda &3\\
+	1 &-1 & 0-\lambda
 	 \\
 \end{pmatrix}
 \end{equation}
+Solving characteristic equation we have :
+\begin{align}
+\lambda^3 -3\lambda^2 +4\lambda -3=0\\
+A^3 -3A^2+4A=3A^{-1}\\
+A^2 -5A+6=3A^{-1}-2A+2\\
+\end{align}
 \begin{equation}
+ 3\times A^{-1}=
 \begin{pmatrix}
-	5 & -1& 2 \\
-	9 & -2 &5\\
-	0 &-1 & -2
-	 \\	
+	3 & -1& -1 \\
+	3& -1 &-4\\
+	-3&2 & 2
 \end{pmatrix}
 \end{equation}
 \begin{align}
-5\times A=
+-2\times A=
 \begin{pmatrix}
-	10 & 0 & 5\\
-	10 & 5 &15\\
-	5 & -5 & 0
+	-4 & 0 & -2\\
+	-4 & -2 &-6\\
+	-2& 2 & 0
 \end{pmatrix}
 \end{align}
 \begin{equation}
-6\times I=
+2\times I=
 \begin{pmatrix}
-	6 & 0& 0 \\
-	0 & 6 &0\\
-	0 &0 & 6
+	2 & 0& 0 \\
+	0 & 2 &0\\
+	0 &0 & 2
 	 \\	
 \end{pmatrix}
 \end{equation}
 Writing the equation by putting values we have:\\
-A^2 -5\times A+6\times I=\\
+A^2 -5\times A+6\times I=3A^{-1}-2A+2\\
 \begin{equation}
 \begin{pmatrix}
-	5 & -1 & 2\\
-	9 & -2 & 5\\
-	0 & -1 &2
+	3 & -1& -1 \\
+	3& -1 &-4\\
+	-3&2 & 2
 \end{pmatrix}
-	-
++
 \begin{pmatrix}
-		10 & 0 & 5\\
-	10 & 5 &15\\
-	5 & -5 & 0
+	-4 & 0 & -2\\
+	-4 & -2 &-6\\
+	-2& 2 & 0
 \end{pmatrix}
 	+
 \begin{pmatrix}
-	6 & 0& 0 \\
-	0 & 6 &0\\
-	0 &0 & 6
+	2 & 0& 0 \\
+	0 & 2 &0\\
+	0 &0 & 2
 	 \\	
 \end{pmatrix}
 \end{equation}
