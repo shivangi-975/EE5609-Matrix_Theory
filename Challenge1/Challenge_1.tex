@@ -154,7 +154,7 @@ columns=fullflexible
      \def\midbox#1{\raisebox{-0.5\baselineskip}[0in][0in]{#1}}
 \vspace{3cm}
 \title{Challenging Problem1}
-\author{Shivangi Parashar AI20MTECH14012} 
+\author{Shivangi Parashar} 
 %\title{
 %	\logo{Matrix Analysis through Octave}{\begin{center}\includegraphics[scale=.24]{tlc}\end{center}}{}{HAMDSP}
 %}
@@ -254,7 +254,7 @@ https://github.com/shivangi-975/Challenge_1/blob/master/Challenge_1.tex
 %
 \section{Problem 79}
 Find the points on the skew lines that are closest to eachother in 3-Dimensions?
- skew line 1 passing through the point \(A(1,1,0)\) with directional vector \(S_1(2,-1,1)\) and skew line 2 passing through the point \(B(2,1,-1)\)  with directional vector \(S_2(3,-5,2)\)
+ skew line 1 passing through the point \(A(1,1,0)\) with directional vector \(v_1(2,-1,1)\) and skew line 2 passing through the point \(B(2,1,-1)\)  with directional vector \(v_2(3,-5,2)\)
 %
 %
 \begin{equation}
@@ -294,54 +294,45 @@ and
 
 Let the closest points be \(P(p_1,p_2,p_3)\) on skew line1 and \(Q(q_1,q_2,q_3)\) on skew line2,\\
 
-\noindent
+Let $\bm{p}$,$\bm{q}$ be two points on the lines $L_1$,$L_2$ 
 \begin{align}
-    \vec{P} = \myvec{1 \\ 1 \\ 0} 
-    + \lambda\myvec{2 \\ -1 \\ 1}
+    \bm{p}=x_1+\lambda_1\bm{v_1}\\
+    \bm{q}=x_2+\lambda_2\bm{v_2}
 \end{align}
 \begin{align}
-    \vec{Q} = \myvec{2 \\ 1 \\ -1} 
-    + \omega\myvec{3 \\ 5 \\ -2}
+    \bm{pq}=x_2+\lambda_2\bm{v_2}-x_1-\lambda_1\bm{v_1}\notag\\
+    \bm{pq}=\begin{pmatrix}x_2& \bm{v_2}\end{pmatrix}\begin{pmatrix}1 \\ \lambda_2\end{pmatrix}-\begin{pmatrix}x_1 & \bm{v_1}\end{pmatrix}\begin{pmatrix}1 \\ \lambda_1\end{pmatrix}
 \end{align}
-\begin{align}
-    \vec{Q}-\vec{P} & = \myvec{2 \\ 1 \\ -1}-\myvec{1 \\ 1 \\ 0} + \omega\myvec{3 \\ -5 \\ 2} -\lambda\myvec{2\\-1\\1}\\
-    &=\myvec{1\\ 0 \\ -1}+ \omega\myvec{3 \\ -5 \\ 2} +\lambda\myvec{-2\\1\\-1}\\
-    & = 
-    \myvec{1\\ 0 \\ -1}+\myvec{3&-2\\-5&1\\2&-1}\myvec{\omega \\ \lambda} 
-\end{align}
-points P and Q are closest points,\vec{Q}-\vec{P} will be perpendicular to both the skew lines,\\
+points P and Q are closest points,\vec{p}-\vec{q} will be perpendicular to both the skew lines,\\
 Therefore,
 \begin{align}\label{val1}
-    \vec{S}_1^T(\vec{Q}-\vec{P}) = 0
+    \vec{v}_1^T(\vec{q}-\vec{p}) = 0
 \end{align}
 \begin{align}\label{val2}
-    \vec{S}_2^T(\vec{Q}-\vec{P}) = 0
+    \vec{v}_2^T(\vec{q}-\vec{p}) = 0
 \end{align}
 From \ref{val1} and \ref{val2} we have:
-\begin{align}\label{val3}
-    \myvec{2 \\ -1 \\ 1}^T\left(\myvec{1\\ 0 \\ -1}+\myvec{3&-2\\-5&1\\2&-1}\myvec{\omega\\ \lambda}\right) = 0
+The dot product of $\bm{v_1}$ with the line $\bm{pq}$ is
+\begin{align}\label{eq1}
+    \bm{v_1^T}\begin{pmatrix}x_2 & \bm{v_2}\end{pmatrix}\begin{pmatrix}1 \\ \lambda_2\end{pmatrix}-\bm{v_1^T}\begin{pmatrix}x_1 & \bm{v_1}\end{pmatrix}\begin{pmatrix}1 \\ \lambda_1\end{pmatrix}=0
 \end{align}
-\begin{align}\label{val4}
-    \myvec{3 \\ -5 \\ 2}^T\left(\myvec{1\\ 0 \\ -1}+\myvec{3&-2\\-5&1\\2&-1}\myvec{\omega \\ \lambda}\right) = 0
+The dot product of $\bm{v_2}$ with the line $\bm{pq}$ is\\
+\begin{align}\label{eq2}
+    \bm{v_2^T}\begin{pmatrix}x_2 & \bm{v_2}\end{pmatrix}\begin{pmatrix}1 \\ \lambda_2\end{pmatrix}-\bm{v_2^T}\begin{pmatrix}x_1 & \bm{v_2}\end{pmatrix}\begin{pmatrix}1 \\ \lambda_1\end{pmatrix}=0
 \end{align}
-Solving \ref{val3} and \ref{val4}  we have:
+solving  \ref{eq1} and \ref{eq2}we  get\\
 \begin{align}
-13\omega-6\lambda&=-1 \label{lvalue}\\
-38\omega-13\lambda&=-1\label{ovalue}
+    \begin{pmatrix}\bm{v_1^T}x_2 & \bm{v_1^T}\bm{v_2} & -\bm{v_1^T}x_1 & -\bm{v_1^T}\bm{v_1}\\\bm{v_2^T}x_2 & \bm{v_2^T}\bm{v_2} & -\bm{v_2^T}x_1 & -\bm{v_2^T}\bm{v_1}\end{pmatrix}\begin{pmatrix}1\\\lambda_1\\1\\\lambda_2\end{pmatrix}=0
 \end{align}
-Solving  \ref{lvalue} and \ref{ovalue},
-we have $\lambda$=25/59 and $\omega$=7/59\\
-Substituting $\lambda$=25/59 and $\omega$=7/59 coordinates of points would be.
+simplifying it further\\
+\begin{align}
+    \begin{pmatrix}\bm{v_1^T}\bm{v_1} & -\bm{v_1^T}\bm{v_2}\\\bm{v_2^T}\bm{v_1} &  -\bm{v_2^T}\bm{v_2}\end{pmatrix}\begin{pmatrix}\lambda_1\\\lambda_2\end{pmatrix}=\begin{pmatrix}\bm{v_1^T}\bm{(x_2-x_1)}\\\bm{v_2^T}\bm{(x_2-x_1)}\end{pmatrix}
+\end{align}
+Substituting  values  we have $\lambda_1$=25/59 and $\lambda_2$=7/59 and coordinates of points would be.
 \begin{align}
 P=\myvec{109/59\\
 34/59\\
 23/59
-}
-\end{align}
-\begin{align}
-Q=\myvec{139/59\\
-24/59\\
--45/59
 }
 \end{align}
 \end{flushleft}
