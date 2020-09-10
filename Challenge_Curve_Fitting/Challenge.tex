@@ -253,41 +253,22 @@ https://github.com/shivangi-975/EE5609-Matrix_Theory/blob/master/Challenge/Chall
 \end{lstlisting}
 %
 \section{Problem}
-Try to solve the following problem purely using what you have seen in the lecture videos uploaded so far.
 Suppose that we are given n distinct pairs of points $(x_1,y_1),(x_2,y_2).....(x_n,y_n)$.How do you check whether all these points lie on a polynomial of degree at most m? 
 Given n distinct pairs of points, is there always a polynomial of degree at most n−1 which passes through all these points?
-\begin{align}
-\myvec{x_1^n & x_1^n-1 &  \cdots & 1\\ 
-x_2^n & x_2^n-1 & \cdots & 1 \\
-\vdots & \vdots & \vdots & \ddots &\vdots \\
-x_n^n & x_n^n-1 &  \cdots &1} 
-\myvec{a_n\\
-a_n-1\\
-\vdots\\
-a0}
-=
-\myvec{
-y_1\\
-y_2\\
-\vdots\\
-y_n
-}
-\end{align}
 %
 %	
 \section{Construction}
 \begin{flushleft}
 Given a set of n  points with distinct x values, there is a unique interpolating polynomial of degree n or less that interpolates the points.
 \section{Solution}
-Given n  points, we construct n equations in n  unknowns. In the following equation, let $a_k$ be the coefficient for
-$x^k $in the unknown polynomial, and let $(x_k,y_k)$be the  data point (given in the problem). The j th equation is given  \begin{align}
-(a^n)(x_j^n)+.................(a_1)(x_j)+a_0=y_j 
+Given n  points, we construct n equations in n  unknowns. Let $a_k$ be the coefficient for $x^k $in the unknown polynomial, and let $(x_k,y_k)$be the  data point (given in the problem). The k  th equation is given  \begin{align}
+(a^n)(x_K^n)+.................(a_1)(x_K)+a_0=y_K 
 \end{align}
-In matrix-vector form (the matrix is n + 1 × n + 1), the equation looks like:
+In matrix-vector form  the equation looks like:
 \begin{align}
 \myvec{x_1^n & x_1^n-1 &  \cdots & 1\\ 
 x_2^n & x_2^n-1 & \cdots & 1 \\
-\vdots & \vdots & \vdots & \ddots &\vdots \\
+\vdots & \vdots & \vdots & \vdots \\
 x_n^n & x_n^n-1 &  \cdots &1} 
 \myvec{a_n\\
 a_n-1\\
@@ -301,7 +282,7 @@ y_2\\
 y_n
 }
 \end{align}
-If the points $x_i$ are distinct, then the matrix is invertible,and that will always  gives us  the coefficients of our polynomial.
+If the points $x_i$ are distinct, then the matrix is invertible,and that will always  gives us  the coefficients of our polynomial and hence the equation of curve. combination 
 \end{flushleft}
 \end{document}
 
