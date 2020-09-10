@@ -280,7 +280,7 @@ C=
 	y_3
 }
 Expressing each side in terms of norm we have:
-\begin{align}
+\begin{align}\label{eq1}
 {||A||} =\sqrt{x_1^2+y_1^2}
 \end{align}
 \begin{align}
@@ -295,16 +295,20 @@ we know for equilateral triangle all sides are equal,Hence we have:
 \end{align}
 Now taking inner product we have:
 \begin{align}
- \vec{A}^T\vec{B} ={|A|}{|B|}\cos \theta\\
+ \vec{A}^T\vec{B} \label{eq1}
 =(\sqrt{x_1^2+y_1^2}\sqrt{x_2^2+y_2^2})\cos\theta =(x_1^2+y_1^2) \cos\theta
 \end{align}
-\begin{align}
- \vec{B}^T\vec{C} ={|B|}{|C|}\cos \theta\\
+\begin{align}\label{eq2}
+ \vec{B}^T\vec{C}
 =(\sqrt{x_2^2+y_2^2}\sqrt{x_3^2+y_3^2})\cos\theta =(x_1^2+y_1^2) \cos\theta
 \end{align}
 \begin{align}
- \vec{C}^T\vec{A} ={|C|}{|A|}\cos \theta\\
+ \vec{C}^T\vec{A}\label{eq3}
 =(\sqrt{x_3^2+y_3^2}\sqrt{x_1^2+y_1^2})\cos\theta =(x_1^2+y_1^2) \cos\theta
+\end{align}
+From \ref{eq1} \ref{eq2} and \ref{eq3} we have
+\begin{align}
+\vec{A}^T\vec{B} =\vec{B}^T\vec{C} =\vec{C}^T\vec{A} 
 \end{align}
 \end{flushleft}
 \end{document}
