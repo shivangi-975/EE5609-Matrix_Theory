@@ -2,9 +2,13 @@
 %
 \usepackage{setspace}
 \usepackage{gensymb}
+\usepackage{siunitx}
+\usepackage{tkz-euclide}
+\usepackage{textcomp}
+\usepackage{standalone}
 %\doublespacing
 \singlespacing
-
+\usetikzlibrary{calc}
 %\usepackage{graphicx}
 %\usepackage{amssymb}
 %\usepackage{relsize}
@@ -50,7 +54,7 @@
     \usepackage{hhline}                                           %%
     \usepackage{ifthen}                                           %%
   %optionally (for landscape tables embedded in another document): %%
-    \usepackage{lscape}     
+    \usepackage{lscape}    
 \usepackage{multicol}
 \usepackage{chngcntr}
 %\usepackage{enumerate}
@@ -73,13 +77,13 @@
 
 \lstset{
 %language=C,
-frame=single, 
+frame=single,
 breaklines=true,
 columns=fullflexible
 }
 %\lstset{
 %language=tex,
-%frame=single, 
+%frame=single,
 %breaklines=true
 %}
 
@@ -94,7 +98,7 @@ columns=fullflexible
 \newtheorem{corollary}[theorem]{Corollary}
 \newtheorem{example}{Example}[section]
 \newtheorem{definition}[problem]{Definition}
-%\newtheorem{thm}{Theorem}[section] 
+%\newtheorem{thm}{Theorem}[section]
 %\newtheorem{defn}[thm]{Definition}
 %\newtheorem{algorithm}{Algorithm}[section]
 %\newtheorem{cor}{Corollary}
@@ -119,7 +123,7 @@ columns=fullflexible
 \newtheorem{rem}{Remark}
 \newcommand{\sgn}{\mathop{\mathrm{sgn}}}
 \providecommand{\abs}[1]{\left\vert#1\right\vert}
-\providecommand{\res}[1]{\Res\displaylimits_{#1}} 
+\providecommand{\res}[1]{\Res\displaylimits_{#1}}
 \providecommand{\norm}[1]{\left\lVert#1\right\rVert}
 %\providecommand{\norm}[1]{\lVert#1\rVert}
 \providecommand{\mtx}[1]{\mathbf{#1}}
@@ -127,7 +131,7 @@ columns=fullflexible
 \providecommand{\fourier}{\overset{\mathcal{F}}{ \rightleftharpoons}}
 %\providecommand{\hilbert}{\overset{\mathcal{H}}{ \rightleftharpoons}}
 \providecommand{\system}{\overset{\mathcal{H}}{ \longleftrightarrow}}
-	%\newcommand{\solution}[2]{\textbf{Solution:}{#1}}
+%\newcommand{\solution}[2]{\textbf{Solution:}{#1}}
 \newcommand{\solution}{\noindent \textbf{Solution: }}
 \newcommand{\cosec}{\,\text{cosec}\,}
 \providecommand{\dec}[2]{\ensuremath{\overset{#1}{\underset{#2}{\gtrless}}}}
@@ -156,7 +160,7 @@ columns=fullflexible
 \title{Assignment 4}
 \author{Shivangi Parashar}
 %\title{
-%	\logo{Matrix Analysis through Octave}{\begin{center}\includegraphics[scale=.24]{tlc}\end{center}}{}{HAMDSP}
+% \logo{Matrix Analysis through Octave}{\begin{center}\includegraphics[scale=.24]{tlc}\end{center}}{}{HAMDSP}
 %}
 % paper title
 % can use linebreaks \\ within to get better formatting as desired
@@ -174,10 +178,10 @@ columns=fullflexible
 %\author{<-this % stops a space
 %\thanks{}}
 %}
-% note the % following the last \IEEEmembership and also \thanks - 
+% note the % following the last \IEEEmembership and also \thanks -
 % these prevent an unwanted space from occurring between the last author name
 % and the end of the author line. i.e., if you had this:
-% 
+%
 % \author{....lastname \thanks{...} \thanks{...} }
 %                     ^------------^------------^----Do not want these spaces!
 %
@@ -196,7 +200,7 @@ columns=fullflexible
 %{Shell \MakeLowercase{\textit{et al.}}: Bare Demo of IEEEtran.cls for Journals}
 % The only time the second header will appear is for the odd numbered pages
 % after the title page when using the twoside option.
-% 
+%
 % *** Note that you probably will NOT want to include the author's ***
 % *** name in the headers of peer review papers.                   ***
 % You can use \ifCLASSOPTIONpeerreview for conditional compilation here if
@@ -216,7 +220,7 @@ columns=fullflexible
 %\renewcommand{\theequation}{\theenumi}
 %\begin{abstract}
 %%\boldmath
-%In this letter, an algorithm for evaluating the exact analytical bit error rate  (BER)  for the piecewise linear (PL) combiner for  multiple relays is presented. Previous results were available only for upto three relays. The algorithm is unique in the sense that  the actual mathematical expressions, that are prohibitively large, need not be explicitly obtained. The diversity gain due to multiple relays is shown through plots of the analytical BER, well supported by simulations. 
+%In this letter, an algorithm for evaluating the exact analytical bit error rate  (BER)  for the piecewise linear (PL) combiner for  multiple relays is presented. Previous results were available only for upto three relays. The algorithm is unique in the sense that  the actual mathematical expressions, that are prohibitively large, need not be explicitly obtained. The diversity gain due to multiple relays is shown through plots of the analytical BER, well supported by simulations.
 %
 %\end{abstract}
 % IEEEtran.cls defaults to using nonbold math in the Abstract.
@@ -245,57 +249,58 @@ columns=fullflexible
 \begin{abstract}
 This documnet contains the solution to prove angles of a equilateral triangles are 60 degrees through Linear Algebra .
 \end{abstract}
-Download all python codes from 
+Download all python codes from
 %
 \begin{lstlisting}
 https://github.com/shivangi-975/EE5609-Matrix_Theory/tree/master/Assignment4/Codes
 \end{lstlisting}
 %
-Download latex-tikz codes from 
+Download latex-tikz codes from
 %
 \begin{lstlisting}
 https://github.com/shivangi-975/EE5609-Matrix_Theory/blob/master/Assignment4/Assignment4.tex
 \end{lstlisting}
 %
 \section{Problem}
-To prove angles of equilateral triangles are  $ 60^{\circ}$each. 
+To prove angles of equilateral triangles are  $ 60^{\circ}$ each.
 %
-%	
+%
 \section{Solution}
-\begin{flushleft}
-Consider an equilateral $\triangle{ABC}$ as shown in below figure:
+
 \renewcommand{\thefigure}{1}
 \begin{figure}[!ht]
-    \centering
-    \resizebox{7cm}{!}{\input{TriangleFig.tex}}
-    \caption{Equilateral $\triangle{ABC}$}
-    \label{fig:tri_right_angle}
+\centering
+\resizebox{\columnwidth}{!}{\input{TriangleFig.tex}}
+\caption{Equilateral $\triangle{ABC}$ with A,B and C as vertices}
+\label{fig:tri_right_angle}
 \end{figure}
-Considering A,B and C as the vertices of triangle:\\
-A=
+Considering A,B and C as the vertices of triangle:
+\begin{align}
+   A=
 \myvec{
-	x_1\\
-	y_1
+x_1\\
+y_1
 }
 B=
 \myvec{
-	x_2\\
-	y_2
+x_2\\
+y_2
 }
 C=
 \myvec{
-	x_3\\
-	y_3
-}
+x_3\\
+y_3
+} \nonumber
+\end{align}
 Expressing each side in terms of norm we have:
 \begin{align}\label{eq1}
-{||A||} =\sqrt{x_1^2+y_1^2}
+{\norm{A}} =\sqrt{x_1^2+y_1^2}
 \end{align}
 \begin{align}
-{||B||} =\sqrt{x_2^2+y_2^2}
+{\norm{B}}  =\sqrt{x_2^2+y_2^2}
 \end{align}
 \begin{align}
-{||C||} =\sqrt{x_3^2+y_3^2}
+{\norm{C}}  =\sqrt{x_3^2+y_3^2}
 \end{align}
 we know for equilateral triangle all sides are equal,Hence we have:
 \begin{align}
@@ -316,10 +321,10 @@ Now taking inner product we have:
 \end{align}
 From \ref{eq1} \ref{eq2} and \ref{eq3} we have
 \begin{align}
-\vec{A}^T\vec{B} =\vec{B}^T\vec{C} =\vec{C}^T\vec{A} 
+\vec{A}^T\vec{B} =\vec{B}^T\vec{C} =\vec{C}^T\vec{A}
 \end{align}
-\end{flushleft}
 \end{document}
 
-   
-
+	
+	
+	
