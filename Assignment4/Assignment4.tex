@@ -278,51 +278,50 @@ Considering A,B and C as the vertices of triangle:
 \begin{align}
    A=
 \myvec{
-x_1\\
-y_1
+0\\
+0
 }
 B=
 \myvec{
-x_2\\
-y_2
+x_1\\
+y_1
 }
 C=
 \myvec{
-x_3\\
-y_3
+x_2\\
+y_2
 } \nonumber
 \end{align}
-Expressing each side in terms of norm we have:
+In equilateral triangle we have:
+\begin{align}
+\norm{\vec{A-B}} = \norm{\vec{B-C}} = \norm{\vec{A-C}}
+\end{align}
+Taking square of Norm forms we have\\
+\begin{align}
+\norm{\vec{A-B}}^2=x_1^2+y_1^2
+\end{align}
+\begin{align}
+\norm{\vec{A-c}}^2=x_2^2+y_2^2
+\end{align}
+\begin{align}
+\norm{\vec{B-c}}^2=(x_2-x_1)^2+(y_2-y_1)^2
+\end{align}
+Taking inner products of side $\vec{AB}$ and $\vec{BC}$ we get $\angle BAC .Hence,$ 
 \begin{align}\label{eq1}
-{\norm{A}} =\sqrt{x_1^2+y_1^2}
+\angle BAC=\norm{\vec{A-B}}^T \norm{\vec{B-C}}\nonumber\\
+\angle BAC=(x_1^2+y_1^2)\cos\theta
 \end{align}
-\begin{align}
-{\norm{B}}  =\sqrt{x_2^2+y_2^2}
-\end{align}
-\begin{align}
-{\norm{C}}  =\sqrt{x_3^2+y_3^2}
-\end{align}
-we know for equilateral triangle all sides are equal,Hence we have:
-\begin{align}
-{||A||}= {||B||}={||C||}
-\end{align}
-Now taking inner product we have:
-\begin{align}
- \vec{A}^T\vec{B} \label{eq1}
-=(\sqrt{x_1^2+y_1^2}\sqrt{x_2^2+y_2^2})\cos\theta =(x_1^2+y_1^2) \cos\theta
-\end{align}
+Taking inner products of side $\vec{BC}$ and $\vec{AC}$ we get $\angle BCA$ .Hence,
 \begin{align}\label{eq2}
- \vec{B}^T\vec{C}
-=(\sqrt{x_2^2+y_2^2}\sqrt{x_3^2+y_3^2})\cos\theta =(x_1^2+y_1^2) \cos\theta
+\angle BCA=\norm{\vec{A-B}}^T \norm{\vec{B-C}}\nonumber\\
+\angle BCA=(x_1^2+y_1^2)\cos\theta
 \end{align}
-\begin{align}
- \vec{C}^T\vec{A}\label{eq3}
-=(\sqrt{x_3^2+y_3^2}\sqrt{x_1^2+y_1^2})\cos\theta =(x_1^2+y_1^2) \cos\theta
+Taking inner products of side $\vec{AB}$ and $\vec{BC}$ we get $\angle ABC$. Hence,
+\begin{align}\label{eq3}
+\angle ABC=\norm{\vec{A-B}}^T \norm{\vec{B-C}}\nonumber\\
+\angle ABC=(x_1^2+y_1^2)\cos\theta
 \end{align}
-From \ref{eq1} \ref{eq2} and \ref{eq3} we have
-\begin{align}
-\vec{A}^T\vec{B} =\vec{B}^T\vec{C} =\vec{C}^T\vec{A}
-\end{align}
+Hence from \ref {eq1} ,\ref{eq2} and  \ref{eq3} we have for  equilateral triangle $\angle BAC$=$\angle BCA$=$\angle ABC$.\nonumber
 \end{document}
 
 	
