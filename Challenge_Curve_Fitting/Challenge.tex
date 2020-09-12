@@ -260,7 +260,6 @@ Given n distinct pairs of points, is there always a polynomial of degree at most
 \section{Construction}
 \begin{flushleft}
 Given a set of n  points with distinct x values, there is a unique interpolating polynomial of degree n or less that interpolates the points.
-\section{Solution}
 Given n  points, we construct n equations in n  unknowns. Let $a_k$ be the coefficient for $x^k $in the unknown polynomial, and let $(x_k,y_k)$be the  data point (given in the problem). The k  th equation is given  \begin{align}
 (a^n)(x_K^n)+.................(a_1)(x_K)+a_0=y_K 
 \end{align}
@@ -283,6 +282,50 @@ y_n
 }
 \end{align}
 If the points $x_i$ are distinct, then the matrix is invertible,and that will always  gives us  the coefficients of our polynomial and hence the equation of curve. combination 
+\section{Solution}
+Let us consider $P(x)=a_0+a_1x+a_2x^2$.
+Taking $P(2)=17$ ,$P(3)=11$ and $P(7)=2$ \\
+From above we will get equations like
+\begin{align}
+a_0+2(a_1)+4(a_2)=17\\
+a_0+3(a_1)+9(a_2)=11\\ 
+a_0+7(a_1)+49(a_2)=2
+\end{align}
+Now converting above equations in matrix form we have:
+\begin{align}
+\myvec{1& 2 &4\\
+1&3&4\\
+1&7&49
+}
+\myvec{
+a_0\\a_1\\a_2
+}
+=
+\myvec{
+17\\11\\12
+}
+\end{align}
+Now writing equation in form $X =A^-1B$ we have
+\begin{align}\label{eq1}
+\myvec{
+a_0\\a_1\\a_2
+}
+= A^-1
+\myvec{
+17\\11\\12
+}
+\end{align}
+On solving \ref{eq1} we have :\\
+\begin{align}
+\myvec{
+a_0\\a_1\\a_2
+}
+=
+\myvec{
+67/2\\-39/4\\3/4
+}
+\end{align}
+Hence equation of the curve is $67/2+-39/4x+3/4x^2$
 \end{flushleft}
 \end{document}
 
