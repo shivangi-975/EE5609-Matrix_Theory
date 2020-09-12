@@ -278,50 +278,43 @@ Considering A,B and C as the vertices of triangle:
 \begin{align}
    A=
 \myvec{
-0\\
-0
+a_1\\
+a_2
 }
 B=
 \myvec{
-x_1\\
-y_1
+0\\
+0
 }
 C=
 \myvec{
-x_2\\
-y_2
+c_1\\
+c_2
 } \nonumber
 \end{align}
 In equilateral triangle we have:
-\begin{align}
+\begin{align}\label{eq1}
 \norm{\vec{A-B}} = \norm{\vec{B-C}} = \norm{\vec{A-C}}
 \end{align}
-Taking square of Norm forms we have\\
-\begin{align}
-\norm{\vec{A-B}}^2=x_1^2+y_1^2
-\end{align}
-\begin{align}
-\norm{\vec{A-C}}^2=x_2^2+y_2^2
-\end{align}
-\begin{align}
-\norm{\vec{B-C}}^2=(x_2-x_1)^2+(y_2-y_1)^2
-\end{align}
-Taking inner products of side $\vec{AB}$ and $\vec{BC}$ we get $\angle BAC .Hence,$ 
+Taking Inner Product of $\vec{BC}$ and $\vec{AC}$\\
 \begin{align}\label{eq1}
-\angle BAC=\norm{\vec{A-B}}^T \norm{\vec{B-C}}\nonumber\\
-\angle BAC=(x_1^2+y_1^2)\cos\theta
+\angle BCA=\norm{\vec{B-C}}^T \norm{\vec{A-C}} \nonumber\\
+\angle BCA =\norm{\vec{B-C}}^2\cos\theta
 \end{align}
-Taking inner products of side $\vec{BC}$ and $\vec{AC}$ we get $\angle BCA$ .Hence,
+Taking Inner Product of $\vec{BC}$ and $\vec{AC}$\\
 \begin{align}\label{eq2}
-\angle BCA=\norm{\vec{A-B}}^T \norm{\vec{B-C}}\nonumber\\
-\angle BCA=(x_1^2+y_1^2)\cos\theta
+\angle BAC=\norm{\vec{B-A}}^T \norm{\vec{A-C}} \nonumber\\
+\angle BAC =\norm{\vec{B-C}}^2\cos\theta
 \end{align}
-Taking inner products of side $\vec{AB}$ and $\vec{BC}$ we get $\angle ABC$. Hence,
+Taking Inner Product of $\vec{BC}$ and $\vec{AC}$\\
 \begin{align}\label{eq3}
-\angle ABC=\norm{\vec{A-B}}^T \norm{\vec{B-C}}\nonumber\\
-\angle ABC=(x_1^2+y_1^2)\cos\theta
+\angle ABC =\norm{\vec{A-B}}^T \norm{\vec{B-C}} \nonumber\\
+\angle ABC =\norm{\vec{B-C}}^2\cos\theta
 \end{align}
-Hence from \ref {eq1} ,\ref{eq2} and  \ref{eq3} we have for  equilateral triangle $\angle BAC$=$\angle BCA$=$\angle ABC$.\nonumber
+From \ref{eq1},\ref{eq2} and \ref{eq3} we have
+\begin{align}
+\angle BCA=\angle ABC =\angle BAC
+\end{align}
 \end{document}
 
 	
