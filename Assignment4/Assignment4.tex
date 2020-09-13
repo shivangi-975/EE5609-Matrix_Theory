@@ -292,44 +292,48 @@ c_1\\
 c_2
 } \nonumber
 \end{align}
-In equilateral triangle we have:
+In equilateral triangle all sides are equal.Hence,
 \begin{align}\label{eq11}
-\norm{\vec{A-B}} = \norm{\vec{B-C}} = \norm{\vec{A-C}}=k
+\norm{\vec{A-B}} = \norm{\vec{B-C}} = \norm{\vec{A-C}}
 \end{align}
-Taking the inner product of sides $AB$,$BC$ and sides $CA$,$BC$ and sides and  $BA$,$AC$ .  
+Putting $\vec{B}$= 0 in \ref {eq11} we have,
+\begin{align}\label{eq12}
+\norm{\vec{A}}=\norm{\vec{C}}
+\end{align}
+\begin{align}\label{eq13}
+\norm{\vec{A}}=\norm{\vec{A-C}}
+\end{align}
+Squaring  equation \ref{eq12}
+ \begin{align}\label{eq14}
+\norm{\vec{A}}^2=\norm{\vec{C}}^2
+\end{align}
+Squaring  equation \ref{eq13}
+ \begin{align}\label{eq14}
+\norm{\vec{A}}^2=\norm{\vec{A}}^2 - 2\vec{A}^T C +\norm{\vec{C}}^2 \nonumber \\
+\implies \norm{\vec{A}}^2=2\vec{A}^T C
+\end{align}
+Taking the inner product of sides $AB$,$BC$ we have:
 \begin{align}
     (\vec{A}-\vec{B})^T(\vec{B}-\vec{C}) =
-    \norm{\vec{A}-\vec{B}}\norm{\vec{B}-\vec{C}}\cos{ABC}\\
-    (\vec{A}-\vec{C})^T(\vec{B}-\vec{C}) 
-    = \norm{\vec{A}-\vec{C}}\norm{\vec{B}-\vec{C}}\cos{ACB}\\
-    (\vec{B}-\vec{A})^T(\vec{A}-\vec{C}) =
-    \norm{\vec{B}-\vec{A}}\norm{\vec{A}-\vec{C}}\cos{BAC} 
+    \norm{\vec{A}-\vec{B}}\norm{\vec{B}-\vec{C}}\cos{ABC}
 \end{align}
-The angles from the  above equations are,
-\begin{align}
-    \implies \cos{ABC} = \frac{(\vec{A}-\vec{B})^T(\vec{B}-\vec{C})}{\norm{\vec{A}-\vec{B}}\norm{\vec{B}-\vec{C}}} \label{eq:1}\\ 
-    \implies \cos{ACB} =
-    \frac{(\vec{A}-\vec{C})^T(\vec{B}-\vec{C})}{\norm{\vec{A}-\vec{C}}\norm{\vec{B}-\vec{C}}} \label{eq:2}\\
-    \implies \cos{BAC} =
-    \frac{(\vec{B}-\vec{A})^T(\vec{A}-\vec{C})}{\norm{\vec{B}-\vec{A}}\norm{\vec{A}-\vec{C}}} \label{eq:3}
-    \end{align}
-From \ref{eq11} since triangle is equilateral:
-\begin{align}
-\cos{ABC} = \frac{(\vec{A}-\vec{B})^T(\vec{B}-\vec{C})}{k^2}\\
-\cos{ACB} = \frac{(\vec{A}-\vec{C})^T(\vec{B}-\vec{C})}{k^2}\\
-\cos{BAC} = \frac{(\vec{A}-\vec{B})^T(\vec{B}-\vec{C})}{k^2}
+The angle ABC from the  above equation is:
+\begin{align}\label{my}
+     \cos{ABC} = \frac{(\vec{A}-\vec{B})^T(\vec{B}-\vec{C})}{\norm{\vec{A}-\vec{B}}\norm{\vec{B}-\vec{C}}} 
 \end{align}
-Angles of a equilateral triangles are equal:
-\begin{align}
-\frac{(\vec{A}-\vec{B})^T(\vec{B}-\vec{C})}{k^2}
-=\frac{(\vec{A}-\vec{C})^T(\vec{B}-\vec{C})}{k^2}
-=\frac{(\vec{A}-\vec{B})^T(\vec{B}-\vec{C})}{k^2}
+Substituting value in \ref{my} and putting we have:
+\begin{align}\label{my1}
+     \cos{ABC} = \frac{(\vec{A})^T(\vec{C})}{\norm{\vec{A}}^2}
 \end{align}
-Simplifying we have:
+From \ref{eq14} we have:
+\begin{align}\label{my22}
+     \cos{ABC} = \frac{(\vec{A})^T(\vec{C})}{2(\vec{A})^T (C)}\nonumber\\
+     \implies \cos{ABC} = 1/2\nonumber\\
+\implies \angle ABC =60^{\circ}
+\end{align}
+In equilateral triangle all angles are equal.Hence from equation \ref{my22} \\
 \begin{align}
-(\vec{A}-\vec{B})^T
-=(\vec{A}-\vec{C})^T
-=(\vec{A}-\vec{B})^T
+\cos{ABC} =\cos{BCA} =\cos{BAC} =\angle ABC =60^{\circ}
 \end{align}
 \end{document}
 
