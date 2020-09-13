@@ -293,27 +293,43 @@ c_2
 } \nonumber
 \end{align}
 In equilateral triangle we have:
-\begin{align}\label{eq1}
-\norm{\vec{A-B}} = \norm{\vec{B-C}} = \norm{\vec{A-C}}
+\begin{align}\label{eq11}
+\norm{\vec{A-B}} = \norm{\vec{B-C}} = \norm{\vec{A-C}}=k
 \end{align}
-Taking Inner Product of $\vec{BC}$ and $\vec{AC}$\\
-\begin{align}\label{eq1}
-\angle BCA={\vec{BC}}^T {\vec{AC}} \nonumber\\
-\angle BCA =\norm{\vec{B-C}}^2\cos\theta
-\end{align}
-Taking Inner Product of $\vec{BC}$ and $\vec{AC}$\\
-\begin{align}\label{eq2}
-\angle BAC={\vec{BA}}^T {\vec{AC}} \nonumber\\
-\angle BAC =\norm{\vec{B-C}}^2\cos\theta
-\end{align}
-Taking Inner Product of $\vec{BC}$ and $\vec{AC}$\\
-\begin{align}\label{eq3}
-\angle ABC ={\vec{AB}}^T{\vec{BC}} \nonumber\\
-\angle ABC =\norm{\vec{B-C}}^2\cos\theta
-\end{align}
-From \ref{eq1},\ref{eq2} and \ref{eq3} we have
+Taking the inner product of sides $AB$,$BC$ and sides $CA$,$BC$ and sides and  $BA$,$AC$ .  
 \begin{align}
-\angle BCA=\angle ABC =\angle BAC
+    (\vec{A}-\vec{B})^T(\vec{B}-\vec{C}) =
+    \norm{\vec{A}-\vec{B}}\norm{\vec{B}-\vec{C}}\cos{ABC}\\
+    (\vec{A}-\vec{C})^T(\vec{B}-\vec{C}) 
+    = \norm{\vec{A}-\vec{C}}\norm{\vec{B}-\vec{C}}\cos{ACB}\\
+    (\vec{B}-\vec{A})^T(\vec{A}-\vec{C}) =
+    \norm{\vec{B}-\vec{A}}\norm{\vec{A}-\vec{C}}\cos{BAC} 
+\end{align}
+The angles from the both the  above equations are,
+\begin{align}
+    \implies \cos{ABC} = \frac{(\vec{A}-\vec{B})^T(\vec{B}-\vec{C})}{\norm{\vec{A}-\vec{B}}\norm{\vec{B}-\vec{C}}} \label{eq:1}\\ 
+    \implies \cos{ACB} =
+    \frac{(\vec{A}-\vec{C})^T(\vec{B}-\vec{C})}{\norm{\vec{A}-\vec{C}}\norm{\vec{B}-\vec{C}}} \label{eq:2}\\
+    \implies \cos{BAC} =
+    \frac{(\vec{B}-\vec{A})^T(\vec{A}-\vec{C})}{\norm{\vec{B}-\vec{A}}\norm{\vec{A}-\vec{C}}} \label{eq:3}
+    \end{align}
+From \ref{eq11} since triangle is equilateral we have:
+\begin{align}
+\cos{ABC} = \frac{(\vec{A}-\vec{B})^T(\vec{B}-\vec{C})}{k^2}\\
+\cos{ACB} = \frac{(\vec{A}-\vec{C})^T(\vec{B}-\vec{C})}{k^2}\\
+\cos{BAC} = \frac{(\vec{A}-\vec{B})^T(\vec{B}-\vec{C})}{k^2}
+\end{align}
+Angles of a equilateral triangles are equal .Hence we have
+\begin{align}
+\frac{(\vec{A}-\vec{B})^T(\vec{B}-\vec{C})}{k^2}
+=\frac{(\vec{A}-\vec{C})^T(\vec{B}-\vec{C})}{k^2}
+=\frac{(\vec{A}-\vec{B})^T(\vec{B}-\vec{C})}{k^2}
+\end{align}
+Simplifying we have
+\begin{align}
+(\vec{A}-\vec{B})^T)
+=(\vec{A}-\vec{C})^T)
+=(\vec{A}-\vec{B})^T)
 \end{align}
 \end{document}
 
