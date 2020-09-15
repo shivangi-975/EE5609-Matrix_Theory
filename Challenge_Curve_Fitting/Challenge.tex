@@ -253,7 +253,7 @@ https://github.com/shivangi-975/EE5609-Matrix_Theory/blob/master/Challenge/Chall
 \end{lstlisting}
 %
 \section{Problem}
-Given n distinct pairs of points, is there always a polynomial of degree at most n$-$1 which passes through all these points.
+Suppose that we are given n distinct pairs of points ${x_1,y_1),(x_2,y_2) ........(x_n,y_n)}$.How do you check whether all these points lie on a polynomial of degree at most m.Given (m$< $n)
 %
 %
 \section{Construction}
@@ -279,11 +279,11 @@ y_2\\
 y_n
 }
 \end{align}
-If the points {$x_i$} are distinct, then the matrix would have  inverse,and that will always  gives us  the coefficients of our polynomial and hence the equation of curve.
-We will always get Vandermonde matrix .
-The non-vanishing of the Vandermonde determinant for distinct points  shows that, for distinct points, the map from coefficients to values at those points is a one-to-one correspondence, and thus that the polynomial interpolation problem is solvable with a unique solution.
-
-
+The  above case is when \boldmath{m=n} but if \boldmath{m$<$n} than our matrix could have rank of at most m when points are distinct.\\Hence characteristic equation of matrix would be a polynomial of degree at most m.\\Now if the points {$x_i$} are distinct, then the matrix would have  inverse,and that will always  gives us  the coefficients of our polynomial and hence the equation of curve and all the points lying on the curve should satisfy this.\\
+\\
+\section{Description}
+{\bf{Matrix would always be invertible}}\\
+ Inverse would always be possible because we will always get Vandermonde matrix.The non-vanishing of the Vandermonde matrix for distinct points  shows that, for distinct points, the map from coefficients to values at those points is a one-to-one correspondence, and thus that the polynomial interpolation problem is solvable with a unique solution.
 \section{Solution}
 Let us consider $P(x)=a_0+a_1x+a_2x^2$.
 Taking $P(2)=17$ ,$P(3)=11$ and $P(7)=2$ \\
@@ -307,7 +307,7 @@ a_0\\a_1\\a_2
 17\\11\\12
 }
 \end{align}
-Now writing equation in form ${X =A^-1{B}}$ we have
+Now writing equation in form ${X ={A}^{-1}{B}}$ we have
 \begin{align}\label{eq1}
 \myvec{
 a_0\\a_1\\a_2
@@ -328,8 +328,20 @@ a_0\\a_1\\a_2
 }
 \end{align}
 \text {Hence equation of the curve is}\\
-{${y=3/4x^2-39/4x+ 67/2}$}\\
+${y=3/4x^2-39/4x+ 67/2}$\\
+\section{Problem}
+Given {n} distinct pairs of points is there always a polynomial of degree at most  n$-$1 which passes through all these points.
+\section{Solution}	
+We can draw obvious generalization that given n points ${(x_1, y_1), (x_2, y_2).....(x_n, y_n)}$ we can find a polynomial of degree {n$-$1} which passes through those points by doing the following:\\
+\begin{itemize}
+  {\item {Writing down the general polynomial of degree {n$-$1}}}
+  {\item {Evaluating the polynomial at the points} ${x_1.....x_n}$}
+  {\item {Solving the resulting system of linear equations as shown in section {4}}}
+\end{itemize}
+Hence from above  there will always a polynomial of degree at most n$-$1 which passes through all these n points.
 \end{document}
-	
-	
+
+    
+
+    
 	
