@@ -50,7 +50,7 @@
     \usepackage{hhline}                                           %%
     \usepackage{ifthen}                                           %%
   %optionally (for landscape tables embedded in another document): %%
-    \usepackage{lscape}     
+    \usepackage{lscape}    
 \usepackage{multicol}
 \usepackage{chngcntr}
 %\usepackage{enumerate}
@@ -73,13 +73,13 @@
 
 \lstset{
 %language=C,
-frame=single, 
+frame=single,
 breaklines=true,
 columns=fullflexible
 }
 %\lstset{
 %language=tex,
-%frame=single, 
+%frame=single,
 %breaklines=true
 %}
 
@@ -94,7 +94,7 @@ columns=fullflexible
 \newtheorem{corollary}[theorem]{Corollary}
 \newtheorem{example}{Example}[section]
 \newtheorem{definition}[problem]{Definition}
-%\newtheorem{thm}{Theorem}[section] 
+%\newtheorem{thm}{Theorem}[section]
 %\newtheorem{defn}[thm]{Definition}
 %\newtheorem{algorithm}{Algorithm}[section]
 %\newtheorem{cor}{Corollary}
@@ -119,7 +119,7 @@ columns=fullflexible
 \newtheorem{rem}{Remark}
 \newcommand{\sgn}{\mathop{\mathrm{sgn}}}
 \providecommand{\abs}[1]{\left\vert#1\right\vert}
-\providecommand{\res}[1]{\Res\displaylimits_{#1}} 
+\providecommand{\res}[1]{\Res\displaylimits_{#1}}
 \providecommand{\norm}[1]{\left\lVert#1\right\rVert}
 %\providecommand{\norm}[1]{\lVert#1\rVert}
 \providecommand{\mtx}[1]{\mathbf{#1}}
@@ -127,7 +127,7 @@ columns=fullflexible
 \providecommand{\fourier}{\overset{\mathcal{F}}{ \rightleftharpoons}}
 %\providecommand{\hilbert}{\overset{\mathcal{H}}{ \rightleftharpoons}}
 \providecommand{\system}{\overset{\mathcal{H}}{ \longleftrightarrow}}
-	%\newcommand{\solution}[2]{\textbf{Solution:}{#1}}
+%\newcommand{\solution}[2]{\textbf{Solution:}{#1}}
 \newcommand{\solution}{\noindent \textbf{Solution: }}
 \newcommand{\cosec}{\,\text{cosec}\,}
 \providecommand{\dec}[2]{\ensuremath{\overset{#1}{\underset{#2}{\gtrless}}}}
@@ -156,7 +156,7 @@ columns=fullflexible
 \title{Challenge Problem}
 \author{Shivangi Parashar}
 %\title{
-%	\logo{Matrix Analysis through Octave}{\begin{center}\includegraphics[scale=.24]{tlc}\end{center}}{}{HAMDSP}
+% \logo{Matrix Analysis through Octave}{\begin{center}\includegraphics[scale=.24]{tlc}\end{center}}{}{HAMDSP}
 %}
 % paper title
 % can use linebreaks \\ within to get better formatting as desired
@@ -174,10 +174,10 @@ columns=fullflexible
 %\author{<-this % stops a space
 %\thanks{}}
 %}
-% note the % following the last \IEEEmembership and also \thanks - 
+% note the % following the last \IEEEmembership and also \thanks -
 % these prevent an unwanted space from occurring between the last author name
 % and the end of the author line. i.e., if you had this:
-% 
+%
 % \author{....lastname \thanks{...} \thanks{...} }
 %                     ^------------^------------^----Do not want these spaces!
 %
@@ -196,7 +196,7 @@ columns=fullflexible
 %{Shell \MakeLowercase{\textit{et al.}}: Bare Demo of IEEEtran.cls for Journals}
 % The only time the second header will appear is for the odd numbered pages
 % after the title page when using the twoside option.
-% 
+%
 % *** Note that you probably will NOT want to include the author's ***
 % *** name in the headers of peer review papers.                   ***
 % You can use \ifCLASSOPTIONpeerreview for conditional compilation here if
@@ -216,7 +216,7 @@ columns=fullflexible
 %\renewcommand{\theequation}{\theenumi}
 %\begin{abstract}
 %%\boldmath
-%In this letter, an algorithm for evaluating the exact analytical bit error rate  (BER)  for the piecewise linear (PL) combiner for  multiple relays is presented. Previous results were available only for upto three relays. The algorithm is unique in the sense that  the actual mathematical expressions, that are prohibitively large, need not be explicitly obtained. The diversity gain due to multiple relays is shown through plots of the analytical BER, well supported by simulations. 
+%In this letter, an algorithm for evaluating the exact analytical bit error rate  (BER)  for the piecewise linear (PL) combiner for  multiple relays is presented. Previous results were available only for upto three relays. The algorithm is unique in the sense that  the actual mathematical expressions, that are prohibitively large, need not be explicitly obtained. The diversity gain due to multiple relays is shown through plots of the analytical BER, well supported by simulations.
 %
 %\end{abstract}
 % IEEEtran.cls defaults to using nonbold math in the Abstract.
@@ -245,34 +245,32 @@ columns=fullflexible
 \begin{abstract}
 This document contains the solution to interpolate the curve
 \end{abstract}
-Download all python codes from 
-Download latex-tikz codes from 
+Download all python codes from
+Download latex-tikz codes from
 %
 \begin{lstlisting}
 https://github.com/shivangi-975/EE5609-Matrix_Theory/blob/master/Challenge/Challenge.tex
 \end{lstlisting}
 %
 \section{Problem}
-Suppose that we are given n distinct pairs of points $(x_1,y_1),(x_2,y_2).....(x_n,y_n)$.How do you check whether all these points lie on a polynomial of degree at most m? 
-Given n distinct pairs of points, is there always a polynomial of degree at most n−1 which passes through all these points?
+Given n distinct pairs of points, is there always a polynomial of degree at most n$-$1 which passes through all these points.
 %
-%	
+%
 \section{Construction}
-\begin{flushleft}
-Given a set of n  points with distinct x values, there is a unique interpolating polynomial of degree n or less that interpolates the points.
-Given n  points, we construct n equations in n  unknowns. Let $a_k$ be the coefficient for $x^k $in the unknown polynomial, and let $(x_k,y_k)$be the  data point (given in the problem). The k  th equation is given  \begin{align}
-(a^n)(x_K^n)+.................(a_1)(x_K)+a_0=y_K 
+Given n  points, we construct n equations in n  unknowns. Let {$a_k$} be the coefficient for {$x^k$}in the unknown polynomial, and let {$(x_k,y_k)$}be the  data point (given in the problem). The  equation is given as:
+\begin{align}
+(a^n)(x_K^n)+.................(a_1)(x_K)+a_0=y_K
 \end{align}
 In matrix-vector form  the equation looks like:
 \begin{align}
-\myvec{x_1^n & x_1^n-1 &  \cdots & 1\\ 
-x_2^n & x_2^n-1 & \cdots & 1 \\
+\myvec{x_1^n & x_1^{n-1} &  \cdots & 1\\
+x_2^n & x_2^{n-1} & \cdots & 1 \\
 \vdots & \vdots & \vdots & \vdots \\
-x_n^n & x_n^n-1 &  \cdots &1} 
+x_n^n & x_n^{n-1} &  \cdots &1}
 \myvec{a_n\\
-a_n-1\\
+a_{n-1}\\
 \vdots\\
-a0}
+a_0}
 =
 \myvec{
 y_1\\
@@ -281,14 +279,18 @@ y_2\\
 y_n
 }
 \end{align}
-If the points $x_i$ are distinct, then the matrix is invertible,and that will always  gives us  the coefficients of our polynomial and hence the equation of curve. combination 
+If the points {$x_i$} are distinct, then the matrix would have  inverse,and that will always  gives us  the coefficients of our polynomial and hence the equation of curve.
+We will always get Vandermonde matrix .
+The non-vanishing of the Vandermonde determinant for distinct points  shows that, for distinct points, the map from coefficients to values at those points is a one-to-one correspondence, and thus that the polynomial interpolation problem is solvable with a unique solution.
+
+
 \section{Solution}
 Let us consider $P(x)=a_0+a_1x+a_2x^2$.
 Taking $P(2)=17$ ,$P(3)=11$ and $P(7)=2$ \\
 From above we will get equations like
 \begin{align}
 a_0+2(a_1)+4(a_2)=17\\
-a_0+3(a_1)+9(a_2)=11\\ 
+a_0+3(a_1)+9(a_2)=11\\
 a_0+7(a_1)+49(a_2)=2
 \end{align}
 Now converting above equations in matrix form we have:
@@ -305,12 +307,12 @@ a_0\\a_1\\a_2
 17\\11\\12
 }
 \end{align}
-Now writing equation in form $X =A^-1B$ we have
+Now writing equation in form ${X =A^-1{B}}$ we have
 \begin{align}\label{eq1}
 \myvec{
 a_0\\a_1\\a_2
 }
-= A^-1
+= {A^{-1}}
 \myvec{
 17\\11\\12
 }
@@ -322,11 +324,12 @@ a_0\\a_1\\a_2
 }
 =
 \myvec{
-67/2\\-39/4\\3/4
+\frac{67}{2}\\\frac{-39}{4}\\\frac{3}{4}
 }
 \end{align}
-Hence equation of the curve is $67/2+-39/4x+3/4x^2$
-\end{flushleft}
+\text {Hence equation of the curve is}\\
+{${y=3/4x^2-39/4x+ 67/2}$}\\
 \end{document}
-
-   
+	
+	
+	
