@@ -1,1 +1,16 @@
+import matplotlib.pyplot as plt
+import numpy as np
+from scipy.linalg import norm
+import math
 
+x = np.linspace(-5,5,100)
+y_1 = 1.111111*x+1.6666 # straight line 1
+y_2 = -*x+7 # straighe line 2
+plt.plot(x, y_1, '-r', label='X+9y=15')
+plt.plot(x, y_2, '-b', label='X+y-7=0')
+plt.title('Graph of two straight lines')
+plt.xlabel('x', color='#1C2833')
+plt.ylabel('y', color='#1C2833')
+plt.legend(loc='best')
+plt.grid()
+plt.show()
