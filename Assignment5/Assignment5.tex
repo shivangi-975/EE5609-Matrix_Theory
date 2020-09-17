@@ -2,13 +2,9 @@
 %
 \usepackage{setspace}
 \usepackage{gensymb}
-\usepackage{siunitx}
-\usepackage{tkz-euclide}
-\usepackage{textcomp}
-\usepackage{standalone}
 %\doublespacing
 \singlespacing
-\usetikzlibrary{calc}
+
 %\usepackage{graphicx}
 %\usepackage{amssymb}
 %\usepackage{relsize}
@@ -54,7 +50,7 @@
     \usepackage{hhline}                                           %%
     \usepackage{ifthen}                                           %%
   %optionally (for landscape tables embedded in another document): %%
-    \usepackage{lscape}    
+    \usepackage{lscape}     
 \usepackage{multicol}
 \usepackage{chngcntr}
 %\usepackage{enumerate}
@@ -77,17 +73,20 @@
 
 \lstset{
 %language=C,
-frame=single,
+frame=single, 
 breaklines=true,
 columns=fullflexible
 }
 %\lstset{
 %language=tex,
-%frame=single,
+%frame=single, 
 %breaklines=true
 %}
+
 \begin{document}
 %
+
+
 \newtheorem{theorem}{Theorem}[section]
 \newtheorem{problem}{Problem}
 \newtheorem{proposition}{Proposition}[section]
@@ -95,7 +94,7 @@ columns=fullflexible
 \newtheorem{corollary}[theorem]{Corollary}
 \newtheorem{example}{Example}[section]
 \newtheorem{definition}[problem]{Definition}
-%\newtheorem{thm}{Theorem}[section]
+%\newtheorem{thm}{Theorem}[section] 
 %\newtheorem{defn}[thm]{Definition}
 %\newtheorem{algorithm}{Algorithm}[section]
 %\newtheorem{cor}{Corollary}
@@ -120,7 +119,7 @@ columns=fullflexible
 \newtheorem{rem}{Remark}
 \newcommand{\sgn}{\mathop{\mathrm{sgn}}}
 \providecommand{\abs}[1]{\left\vert#1\right\vert}
-\providecommand{\res}[1]{\Res\displaylimits_{#1}}
+\providecommand{\res}[1]{\Res\displaylimits_{#1}} 
 \providecommand{\norm}[1]{\left\lVert#1\right\rVert}
 %\providecommand{\norm}[1]{\lVert#1\rVert}
 \providecommand{\mtx}[1]{\mathbf{#1}}
@@ -128,7 +127,7 @@ columns=fullflexible
 \providecommand{\fourier}{\overset{\mathcal{F}}{ \rightleftharpoons}}
 %\providecommand{\hilbert}{\overset{\mathcal{H}}{ \rightleftharpoons}}
 \providecommand{\system}{\overset{\mathcal{H}}{ \longleftrightarrow}}
-%\newcommand{\solution}[2]{\textbf{Solution:}{#1}}
+	%\newcommand{\solution}[2]{\textbf{Solution:}{#1}}
 \newcommand{\solution}{\noindent \textbf{Solution: }}
 \newcommand{\cosec}{\,\text{cosec}\,}
 \providecommand{\dec}[2]{\ensuremath{\overset{#1}{\underset{#2}{\gtrless}}}}
@@ -154,10 +153,10 @@ columns=fullflexible
      \def\topbox#1{\raisebox{-\baselineskip}[0in][0in]{#1}}
      \def\midbox#1{\raisebox{-0.5\baselineskip}[0in][0in]{#1}}
 \vspace{3cm}
-\title{Assignment 4}
+\title{Assignment 5}
 \author{Shivangi Parashar}
 %\title{
-% \logo{Matrix Analysis through Octave}{\begin{center}\includegraphics[scale=.24]{tlc}\end{center}}{}{HAMDSP}
+%	\logo{Matrix Analysis through Octave}{\begin{center}\includegraphics[scale=.24]{tlc}\end{center}}{}{HAMDSP}
 %}
 % paper title
 % can use linebreaks \\ within to get better formatting as desired
@@ -175,10 +174,10 @@ columns=fullflexible
 %\author{<-this % stops a space
 %\thanks{}}
 %}
-% note the % following the last \IEEEmembership and also \thanks -
+% note the % following the last \IEEEmembership and also \thanks - 
 % these prevent an unwanted space from occurring between the last author name
 % and the end of the author line. i.e., if you had this:
-%
+% 
 % \author{....lastname \thanks{...} \thanks{...} }
 %                     ^------------^------------^----Do not want these spaces!
 %
@@ -197,7 +196,7 @@ columns=fullflexible
 %{Shell \MakeLowercase{\textit{et al.}}: Bare Demo of IEEEtran.cls for Journals}
 % The only time the second header will appear is for the odd numbered pages
 % after the title page when using the twoside option.
-%
+% 
 % *** Note that you probably will NOT want to include the author's ***
 % *** name in the headers of peer review papers.                   ***
 % You can use \ifCLASSOPTIONpeerreview for conditional compilation here if
@@ -217,7 +216,7 @@ columns=fullflexible
 %\renewcommand{\theequation}{\theenumi}
 %\begin{abstract}
 %%\boldmath
-%In this letter, an algorithm for evaluating the exact analytical bit error rate  (BER)  for the piecewise linear (PL) combiner for  multiple relays is presented. Previous results were available only for upto three relays. The algorithm is unique in the sense that  the actual mathematical expressions, that are prohibitively large, need not be explicitly obtained. The diversity gain due to multiple relays is shown through plots of the analytical BER, well supported by simulations.
+%In this letter, an algorithm for evaluating the exact analytical bit error rate  (BER)  for the piecewise linear (PL) combiner for  multiple relays is presented. Previous results were available only for upto three relays. The algorithm is unique in the sense that  the actual mathematical expressions, that are prohibitively large, need not be explicitly obtained. The diversity gain due to multiple relays is shown through plots of the analytical BER, well supported by simulations. 
 %
 %\end{abstract}
 % IEEEtran.cls defaults to using nonbold math in the Abstract.
@@ -241,38 +240,24 @@ columns=fullflexible
 %\IEEEpeerreviewmaketitle
 \vspace{2ex}
 \begin{center}
-{\underline{\Large \bf Geometry}}
+%{\underline{\Large \bf Determinant}}
 \end{center}
 \begin{abstract}
-This documnet contains the solution to prove angles of a equilateral triangles are 60 degrees through Linear Algebra .
+This document explains the the concept of finding  two straight lines from given second degree equation 
 \end{abstract}
-Download all python codes from
+Download all python codes from 
 %
 \begin{lstlisting}
-https://github.com/shivangi-975/EE5609-Matrix_Theory/tree/master/Assignment4/Codes
+https://github.com/shivangi-975/EE5609-Matrix_Theory/tree/master/Assignment5/Codes
 \end{lstlisting}
 %
-Download latex-tikz codes from
+Download latex-tikz codes from 
 %
 \begin{lstlisting}
-https://github.com/shivangi-975/EE5609-Matrix_Theory/blob/master/Assignment4/Assignment4.tex
+https://github.com/shivangi-975/EE5609-Matrix_Theory/blob/master/Assignment3/Assignment5.tex
 \end{lstlisting}
 %
-
 \section{Problem}
-%In right triangle ABC, right angled at C, M is
-%the mid-point of hypotenuse AB. C is joined to
-%M and produced to a point D such that DM =
-%CM. Point D is joined to point B. Show that
-%
-%\begin{enumerate}[label = (\alph*)]
-%\item $\triangle  AMC  \cong   \triangle  BMD $
-%\item $\triangle DBC $ is a right angle.
-%\item $\triangle  DBC  \cong  \triangle  ABC $
-%\item $CM = \frac{1}{2} AB$
-%\end{enumerate}
-
-\section{Problem Statement}
 Find the value of k such that $x^2+\frac{10}{3}(xy)+y^2 -5x -7y + k =0$ represent pairs of straight lines.
 \section{Theory}
 The general equation of second degree is given by 
@@ -325,7 +310,7 @@ Substituting \eqref{eq:res} in \eqref{eq:eq5}, we get
 \begin{align}
 	x^{2}+ \frac{10}{3}(xy)+y^2 -5x -7y + 6 =0  \label{eq:reseq}
 \end{align}
-Hence the solution.
+Hence value of k=6 represents pair of straight lines.
 \section{Graphical Illustration}
 Substituting value of k =6 in equation (\ref{dett})
 \begin{align}
@@ -354,14 +339,14 @@ Let the pair of straight lines in vector form is given by
     \vec{n_1}^T\vec{x}&=c_1\label{m1}\\
     \vec{n_2}^T\vec{x}&=c_2\label{m2}
 \end{align}
-Equating their product with \eqref{eqc}
+Equating their product with \eqref{eq:eq4}
 \begin{align}
 (\vec{n_1}^T\vec{x}-c_1)(\vec{n_2}^T\vec{x}-c_2) &=\vec{x}^T\myvec{1 & \frac{5}{3} \\\frac{5}{3} & 1}\vec{x}\notag\\
-+2\myvec{\frac{-5}{2} & \frac{-7}{2}}\vec{x}+6\label{equate}
++2\myvec{\frac{-5}{2} & \frac{-7}{2}}\vec{x}+6\label{86}
 \end{align}
 \begin{align}
     \vec{n_1}*\vec{n_2}&=\{1,\frac{10}{3},1\}\label{conv}\\
-    c_2\vec{n_1}+c_1\vec{n_2}&=-2\myvec{\frac{-5}{2}\\\frac{-7}{2}}\label{eqc1c2}\\
+    c_2\vec{n_1}+c_1\vec{n_2}&=-2\myvec{\frac{-5}{2}\\\frac{-7}{2}}\label{eq98}\\
     c_1c_2&=6
 \end{align}
 The slopes of the lines are given by the roots of the polynomial 
@@ -370,12 +355,12 @@ The slopes of the lines are given by the roots of the polynomial
     \implies m_i&=\frac{-b\pm{\sqrt{-\det(V)}}}{c}\\
     \vec{n_i}&=k\myvec{-m_i\\1}
 \end{align}
-Substituting the given data in above equations \eqref{e} we get,
+Substituting  in above equations \eqref{e} we get,
 \begin{align}
     &m^2+\frac{10}{3}m+1=0\\
     &\implies m_i=\frac{\frac{-7}{2}\pm{\sqrt{-(\frac{-529}{4})}}}{-10}\label{m}
 \end{align}
-Solving equation \eqref{m} we get ,
+Solving equation \eqref{m} we have ,
 \begin{align}
     m_1&=-\frac{-1}{3}\\
     m_2&=-3\\
@@ -386,13 +371,13 @@ Substituting equations \eqref{n1}, \eqref{n2} in equation \eqref{conv} we get
 \begin{align}
     k_1k_2&=1
 \end{align}
-Possible combinations of ($k_1,k_2$) is (1,1)
+Possible combination of ($k_1,k_2$) is (1,1)
 Lets assume $k_1=1$, $k_2=1$, we get 
 \begin{align}
     \vec{n_1}&=\myvec{\frac{1}{3} \\1}\label{n11}\\
     \vec{n_2}&=\myvec{3\\1}\label{n22}
 \end{align}
-From equation \eqref{eqc1c2} we get 
+From equation \eqref{eq98} we get 
 \begin{align}
     \myvec{\vec{n_1} & \vec{n_2}}\myvec{c_2\\c_1}&=-2\myvec{\frac{-5}{2}\\\frac{-7}{2}}\\
     \myvec{1& 3\\1 & 1}\myvec{c_2\\c_1}&=-2\myvec{\frac{-5}{2}\\\frac{-7}{2}}\\
