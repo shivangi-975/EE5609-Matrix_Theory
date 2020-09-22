@@ -76,7 +76,7 @@ plt.plot(x_1,y_axis, 'black')
 plt.xlabel('$x$')
 plt.ylabel('$y$')
 plt.legend(loc='best')
-plt.scatter(-1,2,color='r')
+plt.scatter(-1,2,color='b')
 plt.annotate('$c^{\prime}$',(-1,2),textcoords="offset points",xytext=(0,5),ha='center')
 plt.grid() # minor
 plt.axis('equal')
