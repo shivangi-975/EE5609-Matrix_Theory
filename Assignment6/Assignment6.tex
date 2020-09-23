@@ -402,7 +402,137 @@ From \eqref{eq12} and \eqref{eq11} when the origin is moved to the point  \vec {
 \begin{align}
     \det(\vec{V})&=5.75
 \end{align}
-Since $\det(\vec{V})>0$ the given equation represents the ellipse
+Since $\det(\vec{V})>0$ the given equation represents the ellipse.
+The characteristic equation of $\vec{V}$ is obtained by evaluating the determinant 
+\begin{align}
+       \begin{array}{|c|}
+V-\lambda\vec{I}
+\end{array}&=0\\
+   \begin{array}{|cc|}
+2-\lambda & \frac{-3}{2} \\ \frac{-3}{2} & 4-\lambda
+\end{array}&=0\\
+\implies 4\lambda^2-24\lambda+23&=0\label{eqroots}
+\end{align}
+The eigenvalues are the roots of equation \ref{eqroots} is given by 
+\begin{align}
+    \lambda_1&=\frac{6+\sqrt{13}}{2}\label{eqeig1}\\
+    \lambda_2&=\frac{6-\sqrt{13}}{2}\label{eqeig2}
+\end{align}
+Hence from above:
+\begin{align}\label{d}
+    \vec{D}=
+    \myvec{
+    \frac{6+\sqrt{13}}{2} & 0\\
+     0 &\frac{6-\sqrt{13}}{2}
+    }
+\end{align}
+The eigenvector \vec{p} is defined as 
+\begin{align}
+    \vec{V}\vec{p}&=\lambda\vec{p}\\
+    \implies (\vec{V}-\lambda\vec{I})\vec{p}&=0\label{eqev}
+\end{align}
+For $\lambda_1=\frac{6+\sqrt{13}}{2}$ ,
+\begin{align}
+    (\vec{V}-\lambda_1\vec{I})=\myvec{-\frac{\sqrt{13}-2}{2} & \frac{-3}{2} \\\frac{-3}{2} & \frac{-\sqrt{13}+2}{2}}
+\end{align}
+\begin{align}
+   \myvec{\frac{-\sqrt{13}-2}{2} & \frac{-3}{2} \\\frac{-3}{2} & \frac{-\sqrt{13}+2}{2}}
+    \xleftrightarrow[]{R_1 \leftarrow R_1\div\frac{-\sqrt{13}-2}{2}}
+    \myvec{
+    1 &\frac{-\sqrt{13}-2}{2}\\
+    \frac{-3}{2} & \frac{-\sqrt{13}-2}{2}
+    }
+\end{align}
+\begin{align}
+\myvec{
+    1 &\frac{-\sqrt{13}-2}{2}\\
+    \frac{-3}{2} & \frac{-\sqrt{13}-2}{2}
+    }
+    \xleftrightarrow[]{R_2 \leftarrow R_2\frac{-3}{2}R_1}
+\myvec{
+    1 &\frac{-\sqrt{13}-2}{2}\\
+    0 &0
+    }
+    \end{align}
+    \begin{align}\label{p_1}
+    \vec p_1=
+    \myvec{
+    \frac{-\sqrt{13}+2}{2}\\1
+    }
+\end{align}
+For $\lambda_2=\frac{6-\sqrt{13}}{2}$ ,
+\begin{align}
+    (\vec{V}-\lambda_1\vec{I})=\myvec{\frac{\sqrt{13}-2}{2} & \frac{-3}{2} \\\frac{-3}{2} & \frac{\sqrt{13}+2}{2}}
+\end{align}
+\begin{align}
+   \myvec{\frac{\sqrt{13}-2}{2} & \frac{-3}{2} \\\frac{-3}{2} & \frac{\sqrt{13}+2}{2}}
+    \xleftrightarrow[]{R_1 \leftarrow R_1\div\frac{\sqrt{13}-2}{2}}
+    \myvec{
+    1 &\frac{-\sqrt{13}-2}{2}\\
+    \frac{-3}{2} & \frac{-\sqrt{13}-2}{2}
+    }
+\end{align}
+\begin{align}
+\myvec{
+    1 &\frac{-\sqrt{13}-2}{2}\\
+    \frac{-3}{2} & \frac{-\sqrt{13}-2}{2}
+    }
+    \xleftrightarrow[]{R_2 \leftarrow R_2\frac{-3}{2}R_1}
+\myvec{
+    1 &\frac{-\sqrt{13}-2}{2}\\
+    0 &0
+    }
+    \end{align}
+    \begin{align}\label{p_2}
+    \vec p_2=
+    \myvec{
+    \frac{\sqrt{13}+2}{2}\\1
+    }
+    \end{align}
+    \begin{align}\label{n}
+     \vec{p}=\myvec{\vec p_1 &\vec p_2}
+     \end{align}
+    Substituting equations \eqref{p_1}, \eqref{p_2} in equation  \eqref{n}we get 
+\begin{align}
+    \vec{P}&=\myvec{\frac{-\sqrt{13}+2}{3} & \frac{\sqrt{13}+2}{3} \\1 & 1}\label{eqP}
+\end{align}
+Standard ellipse can be written in the form:
+\begin{align}\label{s}
+    \vec{y}^T\vec{D}\vec{y}=\vec{u}^T\vec{V}^{-1}\vec{u}-f
+\end{align}
+Simplifying we get:
+\begin{align}\label{s1}
+\vec{u}^T\vec{V}^{-1}\vec{u}=
+\myvec{
+5 &\frac{-19}{2}
+}
+\myvec
+{
+\frac{16}{23} & \frac{6}{23}\\
+\frac{6}{23} & \frac{8}{23}
+}
+\myvec{
+5\\\frac{-19}{2}
+}
+=24
+\end{align}
+substituting \eqref{s1} in \eqref{s} we have :
+\begin{align}\label{t}
+ \vec{y}^T\vec{D}\vec{y}=1  
+\end{align}
+To get $\vec{y}$,
+\begin{align}
+\vec{y}&=\vec{P}^T\vec{x}-\vec{P}^T\vec{c}\\
+    \vec{y}&=\myvec{\frac{-\sqrt{13}+2}{3} & 1 \\ \frac{\sqrt{13}+2}{3} & 1}
+    \vec{x}-\myvec{\frac{-\sqrt{13}+2}{3} & 1\\ \frac{\sqrt{13}+2}{3} & 1}
+\end{align}
+Substituting  equation \eqref{d}, in equation \eqref{t} 
+\begin{align}
+    \vec{y}^T \myvec{
+    \frac{6+\sqrt{13}}{2} & 0\\
+     0 &\frac{6-\sqrt{13}}{2}
+    }\vec{y}=1
+\end{align}
 \renewcommand{\thefigure}{1}
 \begin{figure}[h]
     \centering
@@ -410,7 +540,6 @@ Since $\det(\vec{V})>0$ the given equation represents the ellipse
     \caption{Ellipse when origin is shifted}
     \label{Fig :1}
 \end{figure}
-The below plot \ref{Fig :1} verifies the given ellipse
 \end{document}
 
   
