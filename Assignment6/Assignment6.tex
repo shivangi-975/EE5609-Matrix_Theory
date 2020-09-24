@@ -433,7 +433,7 @@ The eigenvector \vec{p} is defined as
 \end{align}
 For $\lambda_1=\frac{6+\sqrt{13}}{2}$ ,
 \begin{align}
-    (\vec{V}-\lambda_1\vec{I})=\myvec{-\frac{\sqrt{13}-2}{2} & \frac{-3}{2} \\\frac{-3}{2} & \frac{-\sqrt{13}+2}{2}}
+    (\vec{V}-\lambda_1\vec{I})=\myvec{\frac{-\sqrt{13}-2}{2} & \frac{-3}{2} \\\frac{-3}{2} & \frac{-\sqrt{13}+2}{2}}
 \end{align}
 \begin{align}
    \myvec{\frac{-\sqrt{13}-2}{2} & \frac{-3}{2} \\\frac{-3}{2} & \frac{-\sqrt{13}+2}{2}}
@@ -489,12 +489,16 @@ For $\lambda_2=\frac{6-\sqrt{13}}{2}$ ,
     \frac{\sqrt{13}+2}{2}\\1
     }
     \end{align}
-    \begin{align}\label{n}
-     \vec{p}=\myvec{\vec p_1 &\vec p_2}
-     \end{align}
-    Substituting equations \eqref{p_1}, \eqref{p_2} in equation  \eqref{n}we get 
+Again,for ellipse
 \begin{align}
-    \vec{P}&=\myvec{\frac{-\sqrt{13}+2}{3} & \frac{\sqrt{13}+2}{3} \\1 & 1}\label{eqP}
+\vec{V}&=\vec{P}\vec{D}\vec{P^{-1}}
+\intertext{Where $\vec{D}$ is a diagonal matrix, we get,}
+\vec{P}&=\myvec{\vec{p_1}&\vec{p_2}}\\ \implies\vec{P}&=\myvec{\frac{-\sqrt{13}+2}{3} & \frac{\sqrt{13}+2}{3} \\1 & 1}\label{eqP}\\
+\vec{D}&=
+    \myvec{
+    \frac{6+\sqrt{13}}{2} & 0\\
+     0 &\frac{6-\sqrt{13}}{2}
+    }
 \end{align}
 Standard ellipse can be written in the form:
 \begin{align}\label{s}
@@ -533,7 +537,7 @@ Substituting  equation \eqref{d}, in equation \eqref{t}
      0 &\frac{6-\sqrt{13}}{2}
     }\vec{y}=1
 \end{align}
-The below figure verifies the Ellipse when origin is shifted.
+The following figure is  the graphical representation of Ellipse when origin is shifted.
 \renewcommand{\thefigure}{1}
 \begin{figure}[h]
     \centering
