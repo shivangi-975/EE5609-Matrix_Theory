@@ -33,7 +33,10 @@ u_1 = np.array(([0,0]))
 f = 23
 f_1=-1
 cs = -LA.inv(V)@u
+print(cs)
+print(cs_1)
 cs_1=-LA.inv(V_1)@u_1
+print(cs_1)
 cst = cs[np.newaxis, :].T
 cst_1 = cs_1[np.newaxis, :].T
 #Eigenvalues and eigenvectors
@@ -71,7 +74,7 @@ MinorActual1 = P_1@MinorStandard+cst_1[1]
 plt.plot(xStandardEllipse[0,:],xStandardEllipse[1,:],label='Standard ellipse')
 #Plotting the actual ellipse
 plt.plot(xStandardEllipse1[0,:],xStandardEllipse1[1,:],label=' ellipse at origin ')
-plt.plot(xActualEllipse[0,:],xActualEllipse[1,:],label='Actual ellipse')
+plt.plot(xActualEllipse[0,:],xActualEllipse[1,:],label='ellipse at (-1,2)')
 
 #Labeling the coordinates
 tri_coords = np.vstack((c,cs,cs_1)).T
@@ -90,3 +93,5 @@ plt.legend(loc='best')
 plt.grid() # minor
 plt.axis('equal')
 plt.show()
+
+  
