@@ -73,7 +73,7 @@ MinorActual1 = P_1@MinorStandard+cst_1[1]
 #Plotting the standard ellipse
 plt.plot(xStandardEllipse[0,:],xStandardEllipse[1,:],label='Standard ellipse')
 #Plotting the actual ellipse
-plt.plot(xStandardEllipse1[0,:],xStandardEllipse1[1,:],label=' ellipse at origin ')
+plt.plot(xStandardEllipse1[0,:],xStandardEllipse1[1,:],label=' ellipse at (0,0) ')
 plt.plot(xActualEllipse[0,:],xActualEllipse[1,:],label='ellipse at (-1,2)')
 
 #Labeling the coordinates
