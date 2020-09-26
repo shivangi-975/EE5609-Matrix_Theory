@@ -182,10 +182,16 @@ u_2 &= {\vec{q_2}^T\vec{b}} = \myvec{\frac{1}{\sqrt{5}}&-\frac{2}{\sqrt{5}}}\myv
 \end{align}
 Substituting equation \eqref{eq:eq3} to \eqref{eq:eq4} in \eqref{eq:eq7},to obtain
 the QR Decomposition of the given matrix as:
-\begin{align}
+\begin{align}\label{eqort}
     \myvec{2&1\\1&-2} = \myvec{\frac{2}{\sqrt{5}}&\frac{1}{\sqrt{5}}\\\frac{1}{\sqrt{5}}&-\frac{2}{\sqrt{5}}}\myvec{\sqrt{5}&0\\0&{\sqrt{5}}}
 \end{align}
-\\\end{document}
+In equation \eqref{eqort} $\vec R$ is orthogonal because the columns and rows are orthogonal to each other.
+Simplifying \eqref{eqort} it turns out that if we have orthogonal matrix then  $\vec{Q}\vec{R}$ decomposition will be equal to $\vec{Q }$= $\vec{A}$ and$\vec{ R}$ = $\vec{I}$ (R would be an identity matrix).
+Hence,
+\begin{align}\label{eqort1}
+    \myvec{2&1\\1&-2} = \myvec{{2}&{1}\\{1}&{-2}}\myvec{{1}&{0}\\{0}&{1}}
+\end{align}
+\end{document}
 
  
 
