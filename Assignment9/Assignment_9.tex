@@ -275,9 +275,9 @@ Find all solutions of $\vec{AX}=2\vec{X}$and all solutions of $\vec{AX}=3\vec{X}
 4& -2 & 0\\
 -1 &0 &3}
 \end{align}
-To find all solutions of $\vec{AX}=2\vec{X}$ we will look for vectors in the nullspace of$\vec{A}-2\vec{I}$:\\
+To find all solutions of $\vec{AX}=2\vec{X}$ we will look for vectors in the nullspace of $\vec{A}-2\vec{I}$:
 \begin{align}\label{eq1}
-(\vec{A}-2\vec{I})\vec X=0
+(\vec{A}-2\vec{I})\vec{X}=0
 \end{align}
 Substituting values in \eqref{eq1},
 \begin{align}
@@ -286,8 +286,8 @@ Substituting values in \eqref{eq1},
 -1 &0 &1}
 \vec{X}=0
 \end{align}
-The value of $\vec{X}$ is the special solution of $\vec A-2\vec I$ which is nothing but solutions to N$(\vec{A})$.
-So to find special solutions,converting (\vec A-2\vec I)into
+The value of $\vec{X}$ is the special solution of $\vec{A}-2\vec{I}$ which is nothing but solutions to N$(\vec{A})$.
+So to find special solutions,converting $(\vec A-2\vec I)$into
 Row Reduced Echelon Form we have:
 \begin{align}
 \myvec{4& -4&0\\
@@ -332,23 +332,24 @@ Hence from equation \eqref{eq:eq_5} we have:
 0&1&-1\\
 0&0&0
 }
-\vec X=0
+\vec{X}=0
 \end{align}
-So,$x_3$ is a free variable :\\
+So, $x_3$ is a free variable: Let $x_3$ = $c$. Where $c$ is a constant
 \begin{align}
- {x_2}-{x_3}=0 \implies{x_2}={x_3}=c\\
- {x_1}-{x_3}=0 \implies{x_1}={x_3}=c
+ {x_2}-{x_3}=0 \implies{x_2}={x_3}=c \\
+ {x_1}-{x_3}=0 \implies{x_1}={x_3}=c 
  \end{align}
- So,the solution to $\vec AX =2\vec X$ are all elements of ${F}^3$ of form (c,c,c) where $x \epsilon F$
+ So,the solution to $\vec{AX} =2\vec{X}$ are all elements of $\vec{F}^3$ of form $(c,c,c)$. 
  Hence solutions of
  $\vec{AX}=2\vec{X}$ is,
  \begin{align}
- \vec{c}
+ \vec{X} = 
+ c
  \myvec{
  1\\1\\1
  }
 \end{align}
- Now To find the solution of $\vec AX=3\vec X$ we will look for vectors in the nullspace of $\vec A-3\vec I$ 
+ Now To find the solution of $\vec{A}\vec{X}=3\vec{X}$ we will look for vectors in the nullspace of $\vec{A}-3\vec{I}$ 
  \begin{align}\label{eq11}
 (\vec{A}-3\vec{I})\vec X=0
 \end{align}
@@ -413,10 +414,11 @@ So $x_3$ is a free variable:
   x_2=0\\
   x_3=c
 \end{align}
- So,the solution to $\vec {AX}$ =3$\vec{X}$ are all elements of ${F}^3$ of form (0,0,c) where $z \epsilon F$
+ So,the solution to $\vec {AX}$ =3$\vec{X}$ are all elements of $\vec{F}^3$ of form $(0,0,c)$. 
  Hence solutions of
  $\vec{AX}=3\vec{X}$ is,
  \begin{align}
+ \vec{X} =
  \vec{c}
  \myvec{
  0\\0\\1
@@ -426,4 +428,3 @@ So $x_3$ is a free variable:
 \end{document}
 
    
-
