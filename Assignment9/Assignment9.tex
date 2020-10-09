@@ -342,7 +342,7 @@ So, $x_3$ is a free variable: Let $x_3$ = $c$. Where $c$ is a constant
  So,the solution to $\vec{AX} =2\vec{X}$ are all elements of $\vec{F}^3$ of form $(c,c,c)$. 
  Hence solutions of
  $\vec{AX}=2\vec{X}$ is,
- \begin{align}
+ \begin{align}\label{eq:555}
  \vec{X} = 
  c
  \myvec{
@@ -417,13 +417,45 @@ So $x_3$ is a free variable:
  So,the solution to $\vec {AX}$ =3$\vec{X}$ are all elements of $\vec{F}^3$ of form $(0,0,c)$. 
  Hence solutions of
  $\vec{AX}=3\vec{X}$ is,
- \begin{align}
+ \begin{align}\label{eq:222}
  \vec{X} =
- \vec{c}
+ c
  \myvec{
  0\\0\\1
  }
  \end{align}
+ Now finding eigen values of A we have:
+\begin{align}
+\vec{A}=
+       \myvec{6-\lambda & -4 & 0\\
+             4& -2-\lambda & 0\\
+             -1 &0 &3-\lambda}
+\end{align}\noindent
+calculating we have:
+\begin{align}
+-(\lambda -2)(\lambda^2 -5\lambda+6)\\
+\implies -(\lambda-2)(\lambda-2)(\lambda-3)
+\end{align}
+Solving we have eigen values as $\lambda =2,3$
+so the solutions to  $\vec {AX}$ =2$\vec{X}$ is nothing but eigen vector corresponding to $\lambda=2$
+\begin{align}
+  \vec{X} =
+ c
+ \myvec{
+ 1\\1\\1
+ } 
+\end{align}
+which is same as  equation \ref{eq:555}\\
+Now,
+ solutions to  $\vec {AX}$ =3$\vec{X}$ is nothing but eigen vector corresponding to $\lambda=3$
+ \begin{align}
+  \vec{X} =
+ c
+ \myvec{
+ 0\\0\\1
+ } 
+ \end{align}
+ which is same as equation \ref{eq:222}
 \end{flushleft}
 \end{document}
 
