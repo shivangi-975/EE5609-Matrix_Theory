@@ -320,6 +320,10 @@ From equation \eqref{eqlambda} eigen values are:
  \end{align}
 solution to $\vec{AX} =2\vec{X}$ is eigen vector corresponding to $\lambda=2$
 \begin{align}
+    (\vec{A}-2\vec{I})\vec X=0
+\end{align}
+Substituting values:
+\begin{align}
 \myvec{4& -4&0&0\\
 4 & -4 & 0&0\\
 -1 & 0 &1&0
@@ -373,48 +377,39 @@ So, $x_3$ is a free variable: Let $x_3$ = $c$.
  \begin{align}\label{eq11}
 (\vec{A}-3\vec{I})\vec X=0
 \end{align}
-\begin{align}
-\myvec{3&-4&0\\
-1&-2&0\\
--1&0&0
-}\vec X=0
-\end{align} 
+substituting we have:
 \begin{align}
 \myvec{3& -4&0&0\\
 1 & -2 & 0&0\\
 -1 & 0 &0&0
 }
-\xleftrightarrow[]{R_1 \leftarrow \frac{R_1}{3} } 
+\xleftrightarrow[]{R_1 \leftarrow \frac{R_1}{3} }\nonumber
 &
 \myvec{1&-\frac{4}{3}&0&0\\
 4&-5&0&0\\
--1&0&0&0}\nonumber 
+-1&0&0&0}\xleftrightarrow[]{R_2 \leftarrow R_2-4R_1} 
 \end{align}
 \begin{align}
-\xleftrightarrow[]{R_2 \leftarrow R_2-4R_1} 
     \myvec{1&-\frac{4}{3}&0&0\\
             0&\frac{1}{3}&0&0\\
             -1&0&0&0}
-    \xleftrightarrow[]{R_3 \leftarrow R_3+R_1 }
-\end{align}
-\begin{align}
+    \xleftrightarrow[]{R_3 \leftarrow R_3+R_1 }\nonumber
     \myvec{1&-\frac{4}{3}&0&0\\
             0&\frac{1}{3}&0&0\\
             0&-\frac{4}{3}&0&0}
-     \xleftrightarrow[]{R_2 \leftarrow\frac{R_2}{3} }\nonumber
+            \xleftrightarrow[]{R_2 \leftarrow\frac{R_2}{3} }\nonumber
 \end{align}
 \begin{align}
     \myvec{1&\frac{-4}{3}&0&0\\
     0&1&0&0\\
     0&-\frac{4}{3}&0&0}
-    \xleftrightarrow[]{R_3 \leftarrow R_3-\frac{4}{3}R_2} 
+    \xleftrightarrow[]{R_3 \leftarrow R_3-\frac{4}{3}R_2} \nonumber
     \myvec{1&\frac{4}{3}&0&0\\
            0&1&0&0\\
-         0&0&0&0}   
-    \nonumber
+         0&0&0&0}    \nonumber
+          \xleftrightarrow[]{R_3 \leftarrow R_1+\frac{4}{3}R_2}
 \end{align}
 \begin{align} \label{eq:eq_15}
- \xleftrightarrow[]{R_3 \leftarrow R_1+\frac{4}{3}R_2}
     \myvec{1&0&0&0\\
     0&1&0&0\\
     0&0&0&0} 
