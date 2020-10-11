@@ -275,73 +275,93 @@ Find all solutions of $\vec{AX}=2\vec{X}$and all solutions of $\vec{AX}=3\vec{X}
 4& -2 & 0\\
 -1 &0 &3}
 \end{align}
-To find all solutions of $\vec{AX}=2\vec{X}$ we will look for vectors in the nullspace of $\vec{A}-2\vec{I}$:
+To calculate solution of  $\vec{AX}=2\vec{X}$and all solutions of $\vec{AX}=3\vec{X}$we calculate eigen values of $\vec{A}$:
 \begin{align}\label{eq1}
-(\vec{A}-2\vec{I})\vec{X}=0
+(\vec{A}-\lambda\vec{I})\vec{X}=0
 \end{align}
 Substituting values in \eqref{eq1},
 \begin{align}
-\myvec{4 & -4 & 0\\
-4 & -4 & 0\\
--1 &0 &1}
+\myvec{6-\lambda& -4 & 0\\
+4 & -2-\lambda & 0\\
+-1 &0 &3-\lambda}
 \vec{X}=0
 \end{align}
-The value of $\vec{X}$ is the special solution of $\vec{A}-2\vec{I}$ which is nothing but solutions to N$(\vec{A})$.
-So to find special solutions,converting $(\vec A-2\vec I)$into
-Row Reduced Echelon Form we have:
-\begin{align}
-\myvec{4& -4&0\\
-4 & -4 & 0\\
--1 & 0 &1
-}
-\xleftrightarrow[]{R_2 \leftarrow R_2- R_1 } 
+Simplyfying we have:
+\begin{align}\label{eqdet}
+\myvec{6-\lambda& -4 & 0\\
+4 & -2-\lambda & 0\\
+-1 &0 &3-\lambda}
+\xleftrightarrow[]{R_2 \leftarrow R_2+\frac{4}{\lambda-6} R_1} 
 &
-\myvec{4&-4&0\\
-0&0&0\\
--1&0&1}
-\xleftrightarrow[]{R_1 \leftarrow \frac{R_1}{4} } \nonumber 
+\myvec{6-\lambda&-4&0\\
+0&\frac{-\lambda^2+4\lambda-4}{\lambda-6}&0\\
+-1&0&3-\lambda} \nonumber 
 \end{align}
 \begin{align}
-    \myvec{1&-1&0\\
-            0&0&0\\
-            -1&0&1}
-    \xleftrightarrow[]{R_3 \leftarrow R_3+R_1 }
-    \myvec{1&-1&0\\
-            0&0&0\\
-            0&-1&1}
+\xleftrightarrow[]{R_3 \leftarrow R_3-\frac{1}{\lambda-6}R_1}
+    \myvec{-\lambda+6&-4&0\\
+            0&\frac{-\lambda^2+4\lambda-4}{\lambda-6}&0\\
+            0&\frac{4}{\lambda-6}&-\lambda+3}
+    \xleftrightarrow[]{R_3 \leftarrow R_3+\frac{4}{\lambda^2-4\lambda+4}R_2}\nonumber
+\end{align}
+\begin{align}
+    \myvec{-\lambda+6&-4&0\\
+    0&\frac{-\lambda^2+4\lambda-4}{\lambda-6}&0\\
+    0&0&-\lambda+3}
+\end{align}
+From equation \eqref{eqdet} :
+\begin{align}\label{eqlambda}
+-\lambda^3+7\lambda^2-16\lambda+12
+\end{align}
+From equation \eqref{eqlambda} eigen values are:
+\begin{align}
+ \lambda_1=2\\
+ \lambda_2=3
+ \end{align}
+solution to $\vec{AX} =2\vec{X}$ is eigen vector corresponding to $\lambda=2$
+\begin{align}
+\myvec{4& -4&0&0\\
+4 & -4 & 0&0\\
+-1 & 0 &1&0
+}
+\xleftrightarrow[]{R_1 \leftarrow \frac{R_1}{4}} 
+&
+\myvec{1&-1&0&0\\
+4&-4&0&0\\
+-1&0&1&0}
+\xleftrightarrow[]{R_2 \leftarrow R_2-4R_1 } \nonumber 
+\end{align}
+\begin{align}
+    \myvec{1&-1&0&0\\
+            0&0&0&0\\
+            -1&0&1&0}
+    \xleftrightarrow[]{R_3 \leftarrow R_3-R_1 }
+    \myvec{1&-1&0&0\\
+            0&0&0&0\\
+            0&-1&1&0}
     \xleftrightarrow[]{R_3 \xleftrightarrow[]{} R_2 } \nonumber
 \end{align}
 \begin{align}
-    \myvec{1&-1&0\\
-    0&-1&1\\
-    0&0&0}
-    \xleftrightarrow[]{R_1 \leftarrow R_1-R_2} 
-    \myvec{1&0&-1\\
-    0&-1&1\\
-    0&0&0}   
-    \xleftrightarrow[]{R_2 \leftarrow -R_2} \nonumber
+    \myvec{1&-1&0&0\\
+    0&-1&1&0\\
+    0&0&0&0}
+    \xleftrightarrow[]{R_2 \leftarrow -R_2} 
+    \myvec{1&-1&0&0\\
+    0&1&-1&0\\
+    0&0&0&0}   
+    \xleftrightarrow[]{R_1 \leftarrow R_1+R_2} \nonumber
 \end{align}
 \begin{align} \label{eq:eq_5}
-    \myvec{1&0&-1\\
-    0&-1&1\\
-    0&0&0} 
+    \myvec{1&0&-1&0\\
+    0&1&-1&0\\
+    0&0&0&0} 
 \end{align}
-Hence from equation \eqref{eq:eq_5} we have:
-\begin{align}
-\myvec{1&0&-1\\
-0&1&-1\\
-0&0&0
-}
-\vec{X}=0
-\end{align}
-So, $x_3$ is a free variable: Let $x_3$ = $c$. Where $c$ is a constant
+So, $x_3$ is a free variable: Let $x_3$ = $c$. 
 \begin{align}
  {x_2}-{x_3}=0 \implies{x_2}={x_3}=c \\
  {x_1}-{x_3}=0 \implies{x_1}={x_3}=c 
  \end{align}
- So,the solution to $\vec{AX} =2\vec{X}$ are all elements of $\vec{F}^3$ of form $(c,c,c)$. 
- Hence solutions of
- $\vec{AX}=2\vec{X}$ is,
+ So,the solution to $\vec{AX} =2\vec{X}$is
  \begin{align}\label{eq:555}
  \vec{X} = 
  c
@@ -349,64 +369,54 @@ So, $x_3$ is a free variable: Let $x_3$ = $c$. Where $c$ is a constant
  1\\1\\1
  }
 \end{align}
- Now To find the solution of $\vec{A}\vec{X}=3\vec{X}$ we will look for vectors in the nullspace of $\vec{A}-3\vec{I}$ 
+ solution of $\vec{A}\vec{X}=3\vec{X}$is eigen vector corresponding to $\lambda=3$ 
  \begin{align}\label{eq11}
 (\vec{A}-3\vec{I})\vec X=0
 \end{align}
-Substituting values in \eqref{eq11}we have:
 \begin{align}
 \myvec{3&-4&0\\
 1&-2&0\\
 -1&0&0
 }\vec X=0
 \end{align} 
-The value of $\vec X$ is the special solution of $\vec A-3\vec I$ which is nothing but solutions to N$(\vec{A})$.
-So to find special solutions,converting $(\vec A-3\vec I)$into
-Row Reduced Echelon Form we have:
 \begin{align}
-\myvec{3& -4&0\\
-1 & -2 & 0\\
--1 & 0 &0
+\myvec{3& -4&0&0\\
+1 & -2 & 0&0\\
+-1 & 0 &0&0
 }
 \xleftrightarrow[]{R_1 \leftarrow \frac{R_1}{3} } 
 &
-\myvec{1&-\frac{4}{3}&0\\
-1&-2&0\\
--1&0&0}
-\xleftrightarrow[]{R_2 \leftarrow R_2-R1} \nonumber 
+\myvec{1&-\frac{4}{3}&0&0\\
+4&-5&0&0\\
+-1&0&0&0}\nonumber 
 \end{align}
 \begin{align}
-    \myvec{1&-\frac{4}{3}&0\\
-            0&-\frac{2}{3}&0\\
-            -1&0&0}
+\xleftrightarrow[]{R_2 \leftarrow R_2-4R_1} 
+    \myvec{1&-\frac{4}{3}&0&0\\
+            0&\frac{1}{3}&0&0\\
+            -1&0&0&0}
     \xleftrightarrow[]{R_3 \leftarrow R_3+R_1 }
-    \myvec{1&-\frac{4}{3}&0\\
-            0&-\frac{2}{3}&0\\
-            0&-\frac{4}{3}&0}
-    \xleftrightarrow[]{R_1 \xleftrightarrow[]{} R_1 -2R_2 } \nonumber
+    \myvec{1&-\frac{4}{3}&0&0\\
+            0&\frac{1}{3}&0&0\\
+            0&-\frac{4}{3}&0&0}
+     \nonumber
 \end{align}
 \begin{align}
-    \myvec{1&0&0\\
-    0&-\frac{2}{3}&0\\
-    0&-\frac{4}{3}&0}
-    \xleftrightarrow[]{R_3 \leftarrow R_3-2R_2} 
-    \myvec{1&0&0\\
-           0&-\frac{2}{3}&0\\
-         0&0&0}   
-    \xleftrightarrow[]{R_2 \leftarrow R_2-\frac{2}{3}R_2} \nonumber
+\xleftrightarrow[]{R_2 \xleftrightarrow[]{} \frac{R_2}{3} }
+    \myvec{1&\frac{-4}{3}&0&0\\
+    0&1&0&0\\
+    0&-\frac{4}{3}&0&0}
+    \xleftrightarrow[]{R_3 \leftarrow R_3-\frac{4}{3}R_2} 
+    \myvec{1&\frac{4}{3}&0&0\\
+           0&1&0&0\\
+         0&0&0&0}   
+    \nonumber
 \end{align}
 \begin{align} \label{eq:eq_15}
-    \myvec{1&0&0\\
-    0&1&0\\
-    0&0&0} 
-\end{align}
-Hence from equation \eqref{eq:eq_15},
- \begin{align}
-\myvec{
-1&0&0\\
-0&1&0\\
-0&0&0
- }\vec{X}=0
+ \xleftrightarrow[]{R_3 \leftarrow R_1+\frac{4}{3}R_2}
+    \myvec{1&0&0&0\\
+    0&1&0&0\\
+    0&0&0&0} 
 \end{align}
 So $x_3$ is a free variable:
 \begin{align}
@@ -414,9 +424,7 @@ So $x_3$ is a free variable:
   x_2=0\\
   x_3=c
 \end{align}
- So,the solution to $\vec {AX}$ =3$\vec{X}$ are all elements of $\vec{F}^3$ of form $(0,0,c)$. 
- Hence solutions of
- $\vec{AX}=3\vec{X}$ is,
+ So,the solution to $\vec {AX}$ =3$\vec{X}$is,
  \begin{align}\label{eq:222}
  \vec{X} =
  c
@@ -424,38 +432,6 @@ So $x_3$ is a free variable:
  0\\0\\1
  }
  \end{align}
- Now finding eigen values of A we have:
-\begin{align}
-\vec{A}=
-       \myvec{6-\lambda & -4 & 0\\
-             4& -2-\lambda & 0\\
-             -1 &0 &3-\lambda}
-\end{align}\noindent
-calculating we have:
-\begin{align}
--(\lambda -2)(\lambda^2 -5\lambda+6)\\
-\implies -(\lambda-2)(\lambda-2)(\lambda-3)
-\end{align}
-Solving we have eigen values as $\lambda =2,3$
-so the solutions to  $\vec {AX}$ =2$\vec{X}$ is nothing but eigen vector corresponding to $\lambda=2$
-\begin{align}
-  \vec{X} =
- c
- \myvec{
- 1\\1\\1
- } 
-\end{align}
-which is same as  equation \ref{eq:555}\\
-Now,
- solutions to  $\vec {AX}$ =3$\vec{X}$ is nothing but eigen vector corresponding to $\lambda=3$
- \begin{align}
-  \vec{X} =
- c
- \myvec{
- 0\\0\\1
- } 
- \end{align}
- which is same as equation \ref{eq:222}
 \end{flushleft}
 \end{document}
 
