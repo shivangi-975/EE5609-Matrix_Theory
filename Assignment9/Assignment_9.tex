@@ -285,35 +285,44 @@ Substituting values in \eqref{eq1},
 -1 &0 &3-\lambda}
 \vec{X}=0
 \end{align}
-Simplifying we have:
+Simplifying:
 \begin{align}\label{eqdet}
 \myvec{6-\lambda& -4 & 0\\
 4 & -2-\lambda & 0\\
 -1 &0 &3-\lambda}
-\xleftrightarrow[]{R_2 \leftarrow R_2+\frac{4}{\lambda-6} R_1}\nonumber
+\xleftrightarrow[]{R_1 \leftarrow R_1-R_2}\nonumber
 \end{align}
 \begin{align}
-\myvec{6-\lambda&-4&0\\
-0&\frac{-\lambda^2+4\lambda-4}{\lambda-6}&0\\
--1&0&3-\lambda} \nonumber 
-\xleftrightarrow[]{R_3 \leftarrow R_3-\frac{1}{\lambda-6}R_1}
+    \myvec{2-\lambda& -2+\lambda & 0\\
+4 & -2-\lambda & 0\\
+-1 &0 &3-\lambda}
 \end{align}
+Taking $(3-\lambda)$  and $(2-\lambda)$common from $C_3$ and $R_1$
 \begin{align}
-    \myvec{-\lambda+6&-4&0\\
-            0&\frac{-\lambda^2+4\lambda-4}{\lambda-6}&0\\
-            0&\frac{4}{\lambda-6}&-\lambda+3}
-    \xleftrightarrow[]{R_3 \leftarrow R_3+\frac{4}{\lambda^2-4\lambda+4}R_2}\nonumber
+(3-\lambda)(2-\lambda)
+    \myvec{1&-1&0\\
+            4&-2-\lambda &0\\
+            -1&0&1}
 \end{align}
-\begin{align}
-    \myvec{-\lambda+6&-4&0\\
-    0&\frac{-\lambda^2+4\lambda-4}{\lambda-6}&0\\
-    0&0&-\lambda+3}
-\end{align}
-From equation \eqref{eqdet} :
 \begin{align}\label{eqlambda}
--\lambda^3+7\lambda^2-16\lambda+12
+\myvec{1&-1&0\\
+            4&-2-\lambda &0\\
+            -1&0&1}
+            \xleftrightarrow[]{R_2 \leftarrow R_2-4R_1}
+    \myvec{1&-1&0\\
+            0&-\lambda +2&0\\
+            -1&0&1}
 \end{align}
-From equation \eqref{eqlambda} eigen values are:
+Taking $(2-\lambda)$ common from $R_2$:
+\begin{align}
+(2-\lambda)^2(3-\lambda)
+\myvec{
+1 &-1 &0\\
+0&1&0\\
+-1&0&1
+}
+\end{align}
+Eigen values are:
 \begin{align}
  \lambda_1=2\\
  \lambda_2=3
