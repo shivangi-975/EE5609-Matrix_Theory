@@ -153,7 +153,7 @@ columns=fullflexible
      \def\topbox#1{\raisebox{-\baselineskip}[0in][0in]{#1}}
      \def\midbox#1{\raisebox{-0.5\baselineskip}[0in][0in]{#1}}
 \vspace{3cm}
-\title{Matrix theory Assignment 10}
+\title{Matrix theory Assignment 11}
 \author{Shivangi Parashar}
 %\title{
 %	\logo{Matrix Analysis through Octave}{\begin{center}\includegraphics[scale=.24]{tlc}\end{center}}{}{HAMDSP}
@@ -243,46 +243,87 @@ columns=fullflexible
 %{\underline{\Large \bf Determinant}}
 \end{center}
 \begin{abstract}
-This document contains the concept of vector space $\vec{V}$ over a field $\vec{F}$.
+This document contains the concept of sub space $\vec{V}$
 \end{abstract}
 Download all python codes from 
 %
 \begin{lstlisting}
-https://github.com/shivangi-975/EE5609-Matrix_Theory/tree/master/Assignment10/Codes
+https://github.com/shivangi-975/EE5609-Matrix_Theory/tree/master/Assignment11/Codes
 \end{lstlisting}
 %
 Download latex-tikz codes from 
 %
 \begin{lstlisting}
-https://github.com/shivangi-975/EE5609-Matrix_Theory/blob/master/Assignment10/Assignment_10.tex
+https://github.com/shivangi-975/EE5609-Matrix_Theory/blob/master/Assignment11/Assignment_11.tex
 \end{lstlisting}
 %
 \section{Problem}
-If $\vec{V}$ is a vector space over field $\vec{F}$,verify that: \begin{align}
-\vec{(\alpha_1+\alpha_2)+(\alpha_3+\alpha_4)=[\alpha_2+(\alpha_3+\alpha_1)]+\alpha_4 }\nonumber
-\end{align}
+Which of the following set of vectors
+\begin{align}\alpha=(a_1,a_2...........a_n)\nonumber\end{align} in $\vec{R^n}$ are subspace of $\vec{R^n}$ $(n>=3)$?\\
+a)All $\alpha$ such that $a_1>=0$\\
+b)All $\alpha$ such that $a_1+3a_2=a_3$\\
+c)All $\alpha$ such that$a_2=a_1^{2}$\\
+d)All $\alpha$ such that $a_1a_2=0$\\
+e)All $\alpha$ such that $a_2$ is rational
 %
 %	
 \section{Solution}
-Using property of commutativity of (+) in $\vec{V}$
-\begin{align}
-    (\vec{\alpha_1}+\vec{\alpha_2)}+\vec{(\alpha_3}+\vec{\alpha_4)}=(\vec{\alpha_2}+\vec{\alpha_1)}+\vec{(\alpha_3}+\vec{\alpha_4})
+a)
+All $\alpha$ such that $a_1>=0$ $\in$ $\vec{R^n}$ $(n>=3)$\\
+Let,
+\begin{align}\label{eq2}
+\alpha=(1,0,0,0..........,0) \in \vec{S}\nonumber\\
+(-\alpha)=(-1,0,0,0, . . . , 0) {\not\in} \vec{S}
 \end{align}
-Using property of associativity of (+) in $\vec{V}$
-\begin{align}
-(\vec{\alpha_2}+\vec{\alpha_1)}+\vec{(\alpha_3}+\vec{\alpha_4)}=
-    \vec{\alpha_2}+[\vec{\alpha_1}+\vec{(\alpha_3}+\vec{\alpha_4})]
+From equation \eqref{eq2} it is not closed with respect to scalar multiplication and hence not a subspace.\\
+b)
+All $\alpha$ such that $a_1+3(a_2)$ $\in$ $\vec{R^n}$ $(n>=3)$,\\
+Let $c$ $\in$ $\vec{R}$
+\begin{align}\label{eq3}
+\alpha=(a_1,a_2,a_3,...,a_n) \in \vec{S} \nonumber\\
+\beta=(b_1,b_2,b_3,...,b_n) \in \vec{S}\nonumber\\
 \end{align}
-Using property of commutativity of (+) in $\vec{V}$
+Now,
+c.$(\alpha)$$+$$\beta$
 \begin{align}
-\vec{\alpha_2}+[\vec{\alpha_1}+\vec{(\alpha_3}+\vec{\alpha_4)}]=
-    \vec{\alpha_2}+(\vec{\alpha_3}+\vec{\alpha_1)}+\vec{\alpha_4}
+=c(a_1,a_2,a_3,...,a_n)+(b_1,b_2,b_3,...,b_n)\nonumber\\
+=(ca_1,ca_2,ca_3,...,ca_n)+(b_1,b_2,b_3,...,b_n)\nonumber\\
 \end{align}
-Using property of associativity of (+) in $\vec{V}$
-\begin{align}
-\vec{\alpha_2}+(\vec{\alpha_3}+\vec{\alpha_1)}+\vec{\alpha_4}=[\vec{\alpha_2}+(\vec{\alpha_3}+\vec{\alpha_1}]+ \vec{\alpha_4}
+Now, using condition $a_1+3(a_2)$ we have,
+\begin{align}\label{eq4}
+ca_1+b_1+3(ca_2+b_2)=ca_1+b_1+3ca_2+3b_2\nonumber\\
+\implies c(a_1+3a_2)+(b_1+3b_2)=ca_3+b_3
 \end{align}
-\end{document}
+From equation \eqref{eq4} it is closed under addition and scalar multiplication, hence it is a subspace. \\
+c)
+All $\alpha$ such that $a_2=a_1{^2}$ $\in$ $\vec{R^n}$ $(n>=3)$,\\
+Let,
+\begin{align}\label{eq5}
+ \alpha=(-1, 1,0,...1) \in \vec{S}\nonumber\\
+ \beta=(1,1,0,...0)\in \vec{S}\nonumber\\
+ \implies \alpha+\beta=(0,2,0,...1) {\not\in} \vec{S}
+ \end{align}
+ From equation \eqref{eq5} $2\neq{0^{2}}$.
+ Hence ,it is not closed with respect to additions and hence not a subspace.
+ d)
+All $\alpha$ such that $a_1a_2=0$ $\in$ $\vec{R^n}$ $(n>=3)$,
+Let,
+\begin{align}\label{eq6}
+ \alpha=(0, 1,0,...0) \in \vec{S}\nonumber\\
+ \beta=(1,0,0,...0)\in \vec{S}\nonumber\\
+ \implies \alpha+\beta=(1,1,0,...0) {\not\in} \vec{S}
+ \end{align}
+ From \eqref{eq6}  $1.1 =1$ $\neq 0$ it is not closed with respect to addition and hence not a subspace.\\
+e)
+All $\alpha$ such that $a_2$is rational $\in$ $\vec{R^n}$ $(n>=3)$,
+Let,
+\begin{align}\label{eq7}
+ \alpha=(0, 1,0,...0) \in \vec{S}\nonumber\\
+  {b}=\sqrt{2}\in \vec{R}\nonumber\\
+ b.\alpha=(0,\sqrt{2},0,.....0){\not\in} \vec{S}
+\end{align}
+ From \eqref{eq7} it is not closed with respect to scalar multiplication  and hence not a subspace.\\
+ \end{document}
 
    
 
