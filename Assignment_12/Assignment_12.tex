@@ -257,10 +257,10 @@ Download latex-tikz codes from
 https://github.com/shivangi-975/EE5609-Matrix_Theory/blob/master/Assignment12/Assignment_12.tex
 \end{lstlisting}
 %
-\section{Problem}
-Is the following function T from $R_2$ into $R_2$ is linear transformation?
+\section{\textbf{Problem}}
+Is the following function \textbf{T} from $\mathbb{R}^2$ into $\mathbb{R}^2$  is linear transformation?
 \begin{align}
-T
+\textbf{T} 
 \myvec{
 x_1\\
 x_2}
@@ -268,35 +268,46 @@ x_2}
 \myvec{\sin (x_1)\\x_2} \nonumber\end{align}
 %
 %	
-\section{Solution}
-\begin{align}\label{eq71}
-T
-\myvec{
-\pi\\
-0}
-=
-\myvec{\sin(\pi)\\0
-}
-=
-\myvec{
-0\\
-0
-}
+\section{\textbf{Solution}}
+Let,
+\begin{align}
+\vec{x}=\myvec{x_1\\x_2}; \quad
+\vec{y}=\myvec{y_1\\y_2} 
 \end{align}
-\begin{align}\label{eq72}
-2T
-\myvec{
-\frac{\pi}{2}\\
-0}
-=2
-\myvec{\sin(\frac{\pi}{2})\\0
-}
-=
-\myvec{
-2\\0
-}
+where,
+\begin{align}
+    \vec{x}, \vec{y} \in \mathbb{R}^2 \nonumber 
 \end{align}
-Since equation \eqref{eq71}$\neq$ equation \eqref{eq72}.Hence not a linear transformation
+Now \textbf{T} be the transformation,
+\begin{align}
+\textbf{T}=
+    \myvec{\sin(x) & 0\\
+    0&1
+    }\nonumber
+\end{align}
+\begin{align}
+\vec{x}=
+\myvec{\pi \\0}\nonumber\\
+\vec{y}=
+\myvec{\frac{\pi}{2} \\0}\nonumber
+\end{align}
+\begin{align}\label{1}
+ \textbf{T}(\vec{x+y})=\myvec{\sin(x)& 0\\0&1}\myvec{\frac{3\pi}{2} \\0}=\myvec{-1\\0}
+\end{align}
+\begin{align}
+\textbf{T}(\vec{x})+\textbf{T}(\vec{y})=\myvec{\sin(x)& 0\\0&1}\myvec{\pi\\0}+\myvec{\sin(x)& 0\\0&1}\myvec{\frac{\pi}{2}\\0}\nonumber\end{align}
+\begin{align}\label{2}
+\implies\myvec{0\\0}+\myvec{1\\0}=\myvec{1\\0}
+\end{align}
+From \eqref{1} and \eqref{2} additive transformation property is not satisfied. Hence not a linear transformation.
+Now,
+\begin{align}\label{eq4}
+\textbf{T}(c{x_2})=\myvec{\sin(x)& 0\\0&1}\myvec{\frac{c\pi}{2}\\0}=\myvec{\sin(\frac{c\pi}{2})\\0}
+\end{align}
+\begin{align}\label{eq5}
+c\textbf{T}(x_2)=c\myvec{\sin(x)& 0\\0&1}\myvec{\frac{\pi}{2}\\0}=\myvec{c\\0}
+\end{align}
+From \eqref{eq4} and \eqref{eq5} scalar multiplication property is not satisfied. Hence not a linear transformation.
 \end{document}
    
 
