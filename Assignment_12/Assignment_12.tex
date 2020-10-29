@@ -258,9 +258,9 @@ https://github.com/shivangi-975/EE5609-Matrix_Theory/blob/master/Assignment12/As
 \end{lstlisting}
 %
 \section{\textbf{Problem}}
-Is the following function \textbf{T} from $\mathbb{R}^2$ into $\mathbb{R}^2$  is linear transformation?
+Is the following function $\vec{T}$ from $\mathbb{R}^2$ into $\mathbb{R}^2$  is linear transformation?
 \begin{align}
-\textbf{T} 
+\vec{T} 
 \myvec{
 x_1\\
 x_2}
@@ -271,43 +271,26 @@ x_2}
 \section{\textbf{Solution}}
 Let,
 \begin{align}
-\vec{x}=\myvec{x_1\\x_2}; \quad
-\vec{y}=\myvec{y_1\\y_2} 
-\end{align}
-where,
-\begin{align}
-    \vec{x}, \vec{y} \in \mathbb{R}^2 \nonumber 
-\end{align}
-Now \textbf{T} be the transformation,
-\begin{align}
-\textbf{T}=
-    \myvec{\sin(x) & 0\\
-    0&1
-    }\nonumber
-\end{align}
-\begin{align}
 \vec{x}=
-\myvec{\pi \\0}\nonumber\\
+\myvec{\pi \\0}; \quad
 \vec{y}=
 \myvec{\frac{\pi}{2} \\0}\nonumber
 \end{align}
 \begin{align}\label{1}
- \textbf{T}(\vec{x+y})=\myvec{\sin(x)& 0\\0&1}\myvec{\frac{3\pi}{2} \\0}=\myvec{-1\\0}
+ \vec{T}(\vec{x+y})=\vec{T}\myvec{\frac{3\pi}{2}\\0}=\myvec{-1\\0}
 \end{align}
 \begin{align}
-\textbf{T}(\vec{x})+\textbf{T}(\vec{y})=\myvec{\sin(x)& 0\\0&1}\myvec{\pi\\0}+\myvec{\sin(x)& 0\\0&1}\myvec{\frac{\pi}{2}\\0}\nonumber\end{align}
-\begin{align}\label{2}
-\implies\myvec{0\\0}+\myvec{1\\0}=\myvec{1\\0}
+\vec{T}(\vec{x})+\vec{T}(\vec{y})=\vec{T}\myvec{\pi\\0}+\vec{T}\myvec{\frac{\pi}{2}\\0} = \myvec{1\\0} \label{2}
 \end{align}
 From \eqref{1} and \eqref{2} additive transformation property is not satisfied. Hence not a linear transformation.
 Now,
+\begin{align}\label{eq3}
+\vec{T}(c{x_2})=\vec{T}\myvec{\frac{c\pi}{2}\\0}=\myvec{\sin(\frac{c\pi}{2})\\0}
+\end{align}
 \begin{align}\label{eq4}
-\textbf{T}(c{x_2})=\myvec{\sin(x)& 0\\0&1}\myvec{\frac{c\pi}{2}\\0}=\myvec{\sin(\frac{c\pi}{2})\\0}
+c\vec{T}(x_2)=c\vec{T}\myvec{\frac{\pi}{2}\\0}=\myvec{c\\0}
 \end{align}
-\begin{align}\label{eq5}
-c\textbf{T}(x_2)=c\myvec{\sin(x)& 0\\0&1}\myvec{\frac{\pi}{2}\\0}=\myvec{c\\0}
-\end{align}
-From \eqref{eq4} and \eqref{eq5} scalar multiplication property is not satisfied. Hence not a linear transformation.
+From \eqref{eq3} and \eqref{eq4} scalar multiplication property is not satisfied. Hence not a linear transformation.
 \end{document}
    
 
