@@ -266,59 +266,57 @@ $\vec{U + T}$, $\vec{UT}$, $\vec{TU}$, $\vec{T}^2$, $\vec{U}^2$. $\mathbb{R}^2$ 
 %
 %	
 \section{\textbf{Solution}}
-Given,
+Let $\vec{T}$ and $\vec{U}$  defined by matrices $\vec{A}$ and $\vec{B}$ such that ,
 \begin{align}
-\vec{T}:\mathbb{R}^2\xrightarrow{}\mathbb{R}^2 \nonumber\\
-\vec{U}:\mathbb{R}^2\xrightarrow{}\mathbb{R}^2\nonumber
+ \vec{T}(\vec x)= \vec{A}\vec x;\quad\vec{U}(\vec x)= \vec{B}\vec x
 \end{align}
-Let ,
+Where,
 \begin{align}
-\alpha=
-\myvec{x_1\\x_2
-};\quad \alpha \in \mathbb{R}^2
+    \vec{A}=\myvec{0&1\\1&0};\quad 
+    \vec{B}=\myvec{1&0\\0&0}
 \end{align}
 For Transformation $\vec{(U+T)}$ we have,
 \begin{align}\label{1}
  \vec{(U+T)}\myvec{x_1\\x_2}=
- \vec{U}\myvec{x_1\\x_2}+\vec{T}\myvec{x_1\\x_2}\nonumber\\
- \vec{(U+T)}\myvec{x_1\\x_2}=
- \myvec{x_1\\0}+\myvec{x_2\\x_1}\nonumber\\
- \vec{(U+T)}\myvec{x_1\\x_2}=\myvec{x_1+x_2\\x_1}
+ \vec{U}\myvec{x_1\\x_2}+\vec{T}\myvec{x_1\\x_2}  \nonumber \\
+ \myvec{1&0\\0&0} \myvec{x_1\\x_2} + \myvec{0&1\\1&0} \myvec{x_1\\x_2}
+ =\myvec{x_1+x_2\\x_1}
 \end{align}
 For Transformation $\vec{UT}$ we have,
 \begin{align}
  \vec{UT}\myvec{x_1\\x_2} 
  = \vec{U} \left[\vec{T}\myvec{x_1\\x_2}\right]\nonumber\\
- \vec{UT}\myvec{x_1\\x_2}=
- \vec{U}\myvec{x_2\\x_1}\nonumber\\
- \vec{UT}\myvec{x_1\\x_2}=
+ \myvec{1&0 \\0&0}\myvec{0&1 \\1&0}\myvec{x_1\\x_2}=
+ \myvec{1&0 \\0&0} \left[\myvec{0&1\\1&0}\myvec{x_1\\x_2}\right]\nonumber\nonumber\\
+\myvec{1&0 \\0&0}\myvec{0&1 \\1&0}\myvec{x_1\\x_2}=
 \myvec{x_2\\0}
 \end{align}
 For Transformation $\vec{TU}$ we have,
 \begin{align}
  \vec{TU}\myvec{x_1\\x_2}=
  \vec{T} \left[\vec{U}\myvec{x_1\\x_2}\right]\nonumber\\
- \vec{TU}\myvec{x_1\\x_2}=
- \vec{T}\myvec{x_1\\0}\nonumber\\
- \vec{TU}\myvec{x_1\\x_2}=
+\myvec{0&1 \\1&0}\myvec{1&0 \\0&0}\myvec{x_1\\x_2}=
+ \myvec{0&1 \\1&0}\nonumber
+ \left[\myvec{1&0\\0&0}\myvec{x_1\\x_2}\right]\nonumber\nonumber\\
+ \myvec{0&1 \\1&0}\myvec{1&0 \\0&0}\myvec{x_1\\x_2}=
 \myvec{0\\x_1}
 \end{align}
 For Transformation $\vec{T}^2$ we have,
 \begin{align}
  \vec{T}^2\myvec{x_1\\x_2}=
 \vec{T} \left[\vec{T}\myvec{x_1\\x_2}\right]\nonumber\\
- \vec{T}^2\myvec{x_1\\x_2}=
-\vec{T} \myvec{x_2\\x_1}\nonumber\\
- \vec{T}^2\myvec{x_1\\x_2}=
+ \myvec{0&1 \\1&0}\myvec{0&1 \\1&0}\myvec{x_1\\x_2}=
+\myvec{0&1 \\1&0}\left[\myvec{0&1 \\1&0}\myvec{x_1\\x_2}\right]\nonumber\\
+ \myvec{0&1 \\1&0}\myvec{0&1 \\1&0}\myvec{x_1\\x_2}=
  \myvec{x_1\\x_2}
 \end{align}
 For Transformation $\vec{U}^2$ we have,
 \begin{align}
  \vec{U}^2\myvec{x_1\\x_2}=
 \vec{U} \left[\vec{U}\myvec{x_1\\x_2}\right]\nonumber\\
- \vec{U}^2\myvec{x_1\\x_2}=
-\vec{U} \myvec{x_1\\0}\nonumber\\
- \vec{U}^2\myvec{x_1\\x_2}=
+ \myvec{1&0\\0&0}\myvec{1&0\\0&0} \myvec{x_1\\x_2}=
+\myvec{1&0\\0&0}\left[\myvec{1&0\\0&0}\myvec{x_1\\x_2}\right]\nonumber\\
+ \myvec{1&0\\0&0}\myvec{1&0\\0&0}\myvec{x_1\\x_2}=
  \myvec{x_1\\0}
 \end{align}
 \end{document}
