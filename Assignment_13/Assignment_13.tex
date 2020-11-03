@@ -278,43 +278,35 @@ Where,
 Table \ref{table:1} lists the summary of each Transformations.
 \begin{table*}[ht!]
 \begin{center}
-\begin{tabular}{|l|l|}
+\begin{tabular}{|l|l|l|}
 
 \hline
-\textbf{Transformations} & \textbf{Summary} \\[1ex]
+\textbf{Transformations} & \textbf{Matrix} & \textbf{Vector} \\[0.5ex]
 \hline
  $\vec{U+T}$& 
- $\vec{(U+T)}$\myvec{x_1\\x_2}=
- $\vec{U}$\myvec{x_1\\x_2}+$\vec{T}$\myvec{x_1\\x_2}=
- \myvec{1&0\\0&0} \myvec{x_1\\x_2} + \myvec{0&1\\1&0} \myvec{x_1\\x_2}
- =\myvec{x_1+x_2\\x_1}
+ $\vec{(B+A)}$
+&
+ \myvec{x_1+x_2\\x_1}
 \\ [1ex] 
 
 \hline
 $\vec{UT}$&
- $\vec{UT}$\myvec{x_1\\x_2} 
- = $\vec{U}$ $\left({\vec{T}}\myvec{x_1\\x_2}\right)$=
- \myvec{1&0 \\0&0} $\left(\myvec{0&1\\1&0}\myvec{x_1\\x_2}\right)$=
+ $\vec{BA}$
+&
 \myvec{x_2\\0}
 \\ [1ex]
 \hline
 $\vec{TU}$&
- $\vec{TU}$\myvec{x_1\\x_2}=
- $\vec{T}\left(\vec{U}\myvec{x_1\\x_2}\right)$=
- \myvec{0&1 \\1&0}
- $\left(\myvec{1&0\\0&0}\myvec{x_1\\x_2}\right)$=
+ $\vec{AB}$
+ &
 \myvec{0\\x_1}
 \\ [0.5ex]
 \hline
-$\vec{T}^2$ & $\vec{T}^2$\myvec{x_1\\x_2}=
-$\vec{T} \left(\vec{T}\myvec{x_1\\x_2}\right)$=
-\myvec{0&1 \\1&0}$\left(\myvec{0&1 \\1&0}\myvec{x_1\\x_2}\right)$=
- \myvec{x_1\\x_2}
+$\vec{T}^2$ & $\vec{A}^2$&
+\myvec{x_1\\x_2}
 \\ [0.5ex]
 \hline
-$\vec{U}^2$&$\vec{U}^2$\myvec{x_1\\x_2}=
-$\vec{U} \left(\vec{U}\myvec{x_1\\x_2}\right)$=
-\myvec{1&0\\0&0} $\left(\myvec{1&0\\0&0}\myvec{x_1\\x_2}\right)$ =
+$\vec{U}^2$&$\vec{B}^2$&
 \myvec{x_1\\0}\\ [0.5ex]
 \hline
 \end{tabular}
