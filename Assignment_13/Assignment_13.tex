@@ -243,7 +243,7 @@ columns=fullflexible
 %{\underline{\Large \bf Determinant}}
 \end{center}
 \begin{abstract}
-This document contains the concept of linear transformation.
+This document contains the concept of linear transformations.
 \end{abstract}
 Download all python codes from 
 %
@@ -257,7 +257,7 @@ Download latex-tikz codes from
 https://github.com/shivangi-975/EE5609-Matrix_Theory/blob/master/Assignment13/Assignment_13.tex
 \end{lstlisting}
 %
-\section{\textbf{Problem}}
+\section{Problem}
 Let $\vec{T}$ and $\vec{U}$ be the linear operators on $\mathbb{R}^2$ defined by
 $\vec{T}$$(x_1,x_2)$ =$(x_2,x_1)$ and $\vec{U}$$(x_1,x_2)$=$(x_1,0)$.
 
@@ -265,8 +265,8 @@ Give rules like the ones defining $\vec{T}$ and $\vec{U}$ for each of the transf
 $\vec{U + T}$, $\vec{UT}$, $\vec{TU}$, $\vec{T}^2$, $\vec{U}^2$. $\mathbb{R}^2$ into $\mathbb{R}^2$  is linear transformation?
 %
 %	
-\section{\textbf{Solution}}
-Let $\vec{T}$ and $\vec{U}$  defined by matrices $\vec{A}$ and $\vec{B}$ such that ,
+\section{Solution}
+ Let $\vec{T}$ and $\vec{U}$  defined by matrices $\vec{A}$ and $\vec{B}$ such that ,
 \begin{align}
  \vec{T}(\vec x)= \vec{A}\vec x;\quad\vec{U}(\vec x)= \vec{B}\vec x
 \end{align}
@@ -275,50 +275,54 @@ Where,
     \vec{A}=\myvec{0&1\\1&0};\quad 
     \vec{B}=\myvec{1&0\\0&0}
 \end{align}
-For Transformation $\vec{(U+T)}$ we have,
-\begin{align}\label{1}
- \vec{(U+T)}\myvec{x_1\\x_2}=
- \vec{U}\myvec{x_1\\x_2}+\vec{T}\myvec{x_1\\x_2}  \nonumber \\
+Table \ref{table:1} lists the summary of each Transformations.
+\begin{table*}[ht!]
+\begin{center}
+\begin{tabular}{|l|l|}
+
+\hline
+\textbf{Transformations} & \textbf{Summary} \\[1ex]
+\hline
+ $\vec{U+T}$& 
+ $\vec{(U+T)}$\myvec{x_1\\x_2}=
+ $\vec{U}$\myvec{x_1\\x_2}+$\vec{T}$\myvec{x_1\\x_2}=
  \myvec{1&0\\0&0} \myvec{x_1\\x_2} + \myvec{0&1\\1&0} \myvec{x_1\\x_2}
  =\myvec{x_1+x_2\\x_1}
-\end{align}
-For Transformation $\vec{UT}$ we have,
-\begin{align}
- \vec{UT}\myvec{x_1\\x_2} 
- = \vec{U} \left[\vec{T}\myvec{x_1\\x_2}\right]\nonumber\\
- \myvec{1&0 \\0&0}\myvec{0&1 \\1&0}\myvec{x_1\\x_2}=
- \myvec{1&0 \\0&0} \left[\myvec{0&1\\1&0}\myvec{x_1\\x_2}\right]\nonumber\nonumber\\
-\myvec{1&0 \\0&0}\myvec{0&1 \\1&0}\myvec{x_1\\x_2}=
+\\ [1ex] 
+
+\hline
+$\vec{UT}$&
+ $\vec{UT}$\myvec{x_1\\x_2} 
+ = $\vec{U}$ $\left({\vec{T}}\myvec{x_1\\x_2}\right)$=
+ \myvec{1&0 \\0&0} $\left(\myvec{0&1\\1&0}\myvec{x_1\\x_2}\right)$=
 \myvec{x_2\\0}
-\end{align}
-For Transformation $\vec{TU}$ we have,
-\begin{align}
- \vec{TU}\myvec{x_1\\x_2}=
- \vec{T} \left[\vec{U}\myvec{x_1\\x_2}\right]\nonumber\\
-\myvec{0&1 \\1&0}\myvec{1&0 \\0&0}\myvec{x_1\\x_2}=
- \myvec{0&1 \\1&0}\nonumber
- \left[\myvec{1&0\\0&0}\myvec{x_1\\x_2}\right]\nonumber\nonumber\\
- \myvec{0&1 \\1&0}\myvec{1&0 \\0&0}\myvec{x_1\\x_2}=
+\\ [1ex]
+\hline
+$\vec{TU}$&
+ $\vec{TU}$\myvec{x_1\\x_2}=
+ $\vec{T}\left(\vec{U}\myvec{x_1\\x_2}\right)$=
+ \myvec{0&1 \\1&0}
+ $\left(\myvec{1&0\\0&0}\myvec{x_1\\x_2}\right)$=
 \myvec{0\\x_1}
-\end{align}
-For Transformation $\vec{T}^2$ we have,
-\begin{align}
- \vec{T}^2\myvec{x_1\\x_2}=
-\vec{T} \left[\vec{T}\myvec{x_1\\x_2}\right]\nonumber\\
- \myvec{0&1 \\1&0}\myvec{0&1 \\1&0}\myvec{x_1\\x_2}=
-\myvec{0&1 \\1&0}\left[\myvec{0&1 \\1&0}\myvec{x_1\\x_2}\right]\nonumber\\
- \myvec{0&1 \\1&0}\myvec{0&1 \\1&0}\myvec{x_1\\x_2}=
+\\ [0.5ex]
+\hline
+$\vec{T}^2$ & $\vec{T}^2$\myvec{x_1\\x_2}=
+$\vec{T} \left(\vec{T}\myvec{x_1\\x_2}\right)$=
+\myvec{0&1 \\1&0}$\left(\myvec{0&1 \\1&0}\myvec{x_1\\x_2}\right)$=
  \myvec{x_1\\x_2}
-\end{align}
-For Transformation $\vec{U}^2$ we have,
-\begin{align}
- \vec{U}^2\myvec{x_1\\x_2}=
-\vec{U} \left[\vec{U}\myvec{x_1\\x_2}\right]\nonumber\\
- \myvec{1&0\\0&0}\myvec{1&0\\0&0} \myvec{x_1\\x_2}=
-\myvec{1&0\\0&0}\left[\myvec{1&0\\0&0}\myvec{x_1\\x_2}\right]\nonumber\\
- \myvec{1&0\\0&0}\myvec{1&0\\0&0}\myvec{x_1\\x_2}=
- \myvec{x_1\\0}
-\end{align}
+\\ [0.5ex]
+\hline
+$\vec{U}^2$&$\vec{U}^2$\myvec{x_1\\x_2}=
+$\vec{U} \left(\vec{U}\myvec{x_1\\x_2}\right)$=
+\myvec{1&0\\0&0} $\left(\myvec{1&0\\0&0}\myvec{x_1\\x_2}\right)$ =
+\myvec{x_1\\0}\\ [0.5ex]
+\hline
+\end{tabular}
+\caption{Summary}
+\label{table:1}
+\end{center}
+\vspace{-0.5cm}
+\end{table*}
 \end{document}
    
 
