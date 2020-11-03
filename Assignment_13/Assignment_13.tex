@@ -276,7 +276,7 @@ Where,
     \vec{B}=\myvec{1&0\\0&0}
 \end{align}
 Table \ref{table:1} lists the summary of each Transformations.
-\begin{table*}[ht!]
+\begin{table}[ht!]
 \begin{center}
 \begin{tabular}{|l|l|l|}
 
@@ -284,29 +284,33 @@ Table \ref{table:1} lists the summary of each Transformations.
 \textbf{Transformations} & \textbf{Matrix} & \textbf{Vector} \\[0.5ex]
 \hline
  $\vec{U+T}$& 
- $\vec{(B+A)}$
+ $\vec{(B+A)}=$
+ \myvec{1&1\\1&0
+ }
 &
  \myvec{x_1+x_2\\x_1}
 \\ [1ex] 
 
 \hline
 $\vec{UT}$&
- $\vec{BA}$
+ $\vec{BA}=$
+ \myvec{0&1\\0&0}
 &
 \myvec{x_2\\0}
 \\ [1ex]
 \hline
 $\vec{TU}$&
- $\vec{AB}$
+ $\vec{AB}=$
+ \myvec{0&0\\1&0}
  &
 \myvec{0\\x_1}
 \\ [0.5ex]
 \hline
-$\vec{T}^2$ & $\vec{A}^2$&
+$\vec{T}^2$ & $\vec{A}^2$=\myvec{1&0\\0&1}&
 \myvec{x_1\\x_2}
 \\ [0.5ex]
 \hline
-$\vec{U}^2$&$\vec{B}^2$&
+$\vec{U}^2$&$\vec{B}^2$=\myvec{1&0\\0&0}&
 \myvec{x_1\\0}\\ [0.5ex]
 \hline
 \end{tabular}
@@ -314,7 +318,7 @@ $\vec{U}^2$&$\vec{B}^2$&
 \label{table:1}
 \end{center}
 \vspace{-0.5cm}
-\end{table*}
+\end{table}
 \end{document}
    
 
