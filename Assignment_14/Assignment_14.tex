@@ -276,37 +276,41 @@ What is the matrix of $\vec{T}$ relative to the pair $\vec{\beta}$,$\vec{\beta^{
 %
 %	
 \section{Solution}
- Let,
 \begin{align}
     \beta = \{\epsilon_1 , \epsilon_2\}\implies 
     \epsilon_1=\myvec{1\\0},\epsilon_2=\myvec{0\\1}
 \end{align}
+Hence,$\beta$ as  matrix 
+\begin{align}
+    \beta=\myvec{1&0\\0&1}
+\end{align}
 \begin{align}
  \beta^{'}=\{\alpha_1 , \alpha_2\}\implies
   \alpha_1 = \myvec{1\\i} , \alpha_2 = \myvec{-i\\2}
-\end{align}
-Let $\vec{T}$ be  defined by matrices $\vec{A}$   such that 
+  \end{align}
+ Hence, $\beta^{'}$ as matrix 
+  \begin{align}
+     \beta^{'} =\myvec{
+     1&-i\\i&2
+     }
+  \end{align}
 Let $\vec{T}$ be the transformation defined by
 \begin{align}
    \vec{T\brak{\vec{x}}} = \vec{A}\vec{x}\\
     \vec{T\brak{\vec{x}}}=\myvec{1&-i\\i&2}\vec{x}
 \end{align}
- we have to write $\vec{T\brak{\vec{\epsilon_1}}}$  and $\vec{T\brak{\vec{\epsilon_2}}}$  as linear combinations of $\vec{\alpha_1}$ , $\vec{\alpha_2}$.Hence,
- \begin{align}
-    \myvec{
-    1&-i&1&0\\i&2&0&0
-    }
-    &\xleftrightarrow{R_2=R_2-i{R_1}}
-    \myvec{
-    1&-i &1&0\\0&1&-i&0
-    }
- \end{align}
+  Given;
   \begin{align}
-    &\xleftrightarrow{R_1=R_1+i{R_2}}
-    \myvec{
-    1&0 &2&0\\0&1&-i&0
-    }
- \end{align}
+  \vec T(\epsilon_1,\epsilon_2)=(\epsilon_1,0)
+  \end{align}
+  \begin{align}
+  \vec T(\epsilon_1)=\epsilon_1; \vec T(\epsilon_2)=0
+  \end{align}
+Expressing,$\vec{T}$ relative to $\beta$,$\beta^{'}$ is
+\begin{align}
+  \vec T(\epsilon_1)=2\alpha_1-i\alpha_2\\
+  \vec T(\epsilon_2)=0\alpha_1-0\alpha_2
+\end{align}
  Therefore matrix of relative to the pair  $\beta$ , $\vec{\beta^{'}}$
  \begin{align}
   \vec{T}\brak{\vec{\beta}}=\myvec{2&0\\-i&0}\vec{\beta^{'}}   
