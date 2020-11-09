@@ -299,21 +299,25 @@ Let $\vec{T}$ be the transformation defined by
    \vec{T\brak{\vec{x}}} = \vec{A}\vec{x}\\
     \vec{T\brak{\vec{x}}}=\myvec{1&-i\\i&2}\vec{x}
 \end{align}
-  Given;
-  \begin{align}
-  \vec T(\epsilon_1,\epsilon_2)=(\epsilon_1,0)
-  \end{align}
-  \begin{align}
-  \vec T(\epsilon_1)=\epsilon_1; \vec T(\epsilon_2)=0
-  \end{align}
-Expressing,$\vec{T}$ relative to $\beta$,$\beta^{'}$ is
-\begin{align}
-  \vec T(\epsilon_1)=2\alpha_1-i\alpha_2\\
-  \vec T(\epsilon_2)=0\alpha_1-0\alpha_2
-\end{align}
- Therefore matrix of relative to the pair  $\beta$ , $\vec{\beta^{'}}$
+  we have to write $\vec{T\brak{\vec{\epsilon_1}}}$  and $\vec{T\brak{\vec{\epsilon_2}}}$  as linear combinations of $\vec{\alpha_1}$ , $\vec{\alpha_2}$.Hence,
  \begin{align}
-  \vec{T}\brak{\vec{\beta}}=\myvec{2&0\\-i&0}\vec{\beta^{'}}   
+    \myvec{
+    1&-i&1&0\\i&2&0&0
+    }
+    &\xleftrightarrow{R_2=R_2-i{R_1}}
+    \myvec{
+    1&-i &1&0\\0&1&-i&0
+    }
+ \end{align}
+  \begin{align}
+    &\xleftrightarrow{R_1=R_1+i{R_2}}
+    \myvec{
+    1&0 &2&0\\0&1&-i&0
+    }
+ \end{align}
+ Therefore matrix of relative to the pair  $\beta$ , $\beta^{'}$
+ \begin{align}
+  \vec{T}\brak{\vec{\beta}}=\myvec{2&0\\-i&0}\vec{\beta^{}}   
  \end{align}
 \end{document}
 
