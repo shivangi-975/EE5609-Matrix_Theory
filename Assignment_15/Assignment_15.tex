@@ -318,32 +318,60 @@ Hence,
 \end{align}
 Simplifying,
 \begin{align}
-x_1 = 2a-2b-c\\
-x_2= a-b-c \\
-x_3= a-2b-c\label{eq1}
+x_1 = \myvec{2\\-2\\-1
+}^T
+\myvec{a\\b\\c
+}
+\end{align}
+\begin{align}
+x_2= \myvec{
+1\\-1\\-1
+}^T\myvec{a\\b\\c
+}
+\end{align}
+\begin{align}
+x_3= \myvec{
+1\\-2\\-1
+}^T\myvec{a\\b\\c
+}
 \end{align}
 Given, $f$ is a linear functional on $R^3$,
 \begin{align}
 \vec{\alpha} = \alpha_1 x_1 + \alpha_2 x_2 + \alpha_3 x_3\\
-\implies f(\alpha) = x_1 f(\alpha_1) + x_2f(\alpha_2)+ x_3f(\alpha_3)\\
 \implies f(\alpha) = \vec{x}^T \myvec{f(\alpha_1)\\f(\alpha_2)\\f(\alpha_3)}
 \end{align}
-Given, $f(\alpha_1)=f(\alpha_2)=0$ and $f(\alpha_3)\neq 0$,  consider $f(\alpha_3)= k$ where $k \neq 0$.
+Given, $f(\alpha_1)=f(\alpha_2)=0$ and $f(\alpha_3)\neq 0$.
 \begin{align}
- f(\alpha) = \myvec{x_1 & x_2 & x_3} \myvec{0\\0\\k}\\
-\implies f(\alpha) = x_3 k\\
-\implies f(\alpha) = k (a-2b-c)\\
-\implies f(a,b,c) = k (a-2b-c)
+ f(\alpha) = \vec{x}^T \myvec{0\\0\\f(\alpha_3)}\\
+\implies f(\alpha) = \myvec{
+1\\-2\\-1
+}^T\myvec{a\\b\\c
+} f(\alpha_3)\\
+\implies f\myvec{
+a\\b\\c
+} = \myvec{
+1\\-2\\-1
+}^T\myvec{a\\b\\c
+} f(\alpha_3) 
 \end{align}
 Hence function is:
 \begin{align}
-f(x,y,z) = k (x-2y-z)
+f\myvec{
+x\\y\\z
+} = \myvec{
+1\\-2\\-1
+}^T\myvec{
+x\\y\\z
+}f(\alpha_3)
 \end{align}
 Now to prove $f(\alpha)\neq 0$ ,
 \begin{align}
-    f(\alpha)=k (x-2y-z)\\
-    \implies f(2,3,-1)= k(2-6+1)\\
-\implies -3k\neq 0
+    \implies f\myvec{2\\3\\-1}= \myvec{
+1\\-2\\-1
+}^T\myvec{
+2\\3\\-1
+}f(\alpha_3)\\
+\implies -3f(\alpha_3)\neq 0
 \end{align}
 Hence, proved $f(\alpha)\neq 0$
 \end{document}
