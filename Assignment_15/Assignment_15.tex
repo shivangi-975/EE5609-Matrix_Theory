@@ -328,11 +328,29 @@ x_1 = \myvec{2\\-2\\-1
 \myvec{a\\b\\c
 }
 \end{align}
+Taking $\vec{u_1}$=\myvec{
+2&-2&-1
+}
+and $\vec{y}$=\myvec{
+a\\b\\c
+}
+\begin{align}
+    x_1=\vec{u_1}^T\vec{y}
+\end{align}
 \begin{align}
 x_2= \myvec{
 1\\-1\\-1
 }^T\myvec{a\\b\\c
 }
+\end{align}
+Taking $\vec{u_2}$=\myvec{
+1&-1&-1
+}
+and $\vec{y}$=\myvec{
+a\\b\\c
+}
+\begin{align}
+    x_2=\vec{u_2}^T\vec{y}
 \end{align}
 \begin{align}
 x_3= \myvec{
@@ -340,43 +358,32 @@ x_3= \myvec{
 }^T\myvec{a\\b\\c
 }
 \end{align}
+Taking $\vec{u_3}$=\myvec{
+1&-2&-1
+}
+and $\vec{y}$=\myvec{
+a\\b\\c
+}
+\begin{align}
+    x_3=\vec{u_3}^T\vec{y}
+\end{align}
 Given, $f$ is a linear functional on $R^3$,
 \begin{align}
 \vec{\alpha} = \alpha_1 x_1 + \alpha_2 x_2 + \alpha_3 x_3\\
-\implies f(\alpha) = x_1 f(\alpha_1) + x_2f(\alpha_2)+ x_3f(\alpha_3)\\
-\implies f(\alpha) = \myvec{x_1 & x_2 & x_3} \myvec{f(\alpha_1)\\f(\alpha_2)\\f(\alpha_3)}\\
+\implies f(\alpha) = \myvec{\vec{u_1}^T\vec{y} & \vec{u_2}^T\vec{y} & \vec{u_3}^T\vec{y}} \myvec{f(\alpha_1)\\f(\alpha_2)\\f(\alpha_3)}\\
 \implies f(\alpha) = \vec{x}^T \myvec{f(\alpha_1)\\f(\alpha_2)\\f(\alpha_3)}
 \end{align}
 Given, $f(\alpha_1)=f(\alpha_2)=0$ and $f(\alpha_3)\neq 0$.
 \begin{align}
  f(\alpha) = \vec{x}^T \myvec{0\\0\\f(\alpha_3)}\\
 \implies f(\alpha) = \myvec{
-1\\-2\\-1
-}^T\myvec{a\\b\\c
-} f(\alpha_3)\\
-\implies f\myvec{
-a\\b\\c
-} = \myvec{
-1\\-2\\-1
-}^T\myvec{a\\b\\c
-} f(\alpha_3) 
+\vec{u_3}^T\vec{y}
+} f(\alpha_3)
 \end{align}
-Hence function is:
+Now for $\alpha$=\myvec{2,3,-1}
+ to prove $f(\alpha)\neq 0$ ,
 \begin{align}
-f\myvec{
-x\\y\\z
-} = \myvec{
-1\\-2\\-1
-}^T\myvec{
-x\\y\\z
-}f(\alpha_3)
-\end{align}
-Now to prove $f(\alpha)\neq 0$ ,
-\begin{align}
-    \implies f\myvec{2\\3\\-1}= \myvec{
-1\\-2\\-1
-}^T\myvec{
-2\\3\\-1
+    \implies f(\alpha)=\myvec{ \vec{u_3}^T\vec{y}
 }f(\alpha_3)\\
 \implies -3f(\alpha_3)\neq 0
 \end{align}
