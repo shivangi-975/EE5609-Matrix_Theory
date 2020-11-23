@@ -268,72 +268,107 @@ Let A be a $3\times 3$  matrix  with real entries.Identify  the correct statemen
 
 4.If all eigen values are non zero than it is diagonalizable over $\vec{C}$
 \section{Solution}
-\clearpage
+
 \renewcommand{\thetable}{1}
 \begin{table*}[ht!]
 \begin{center}
 \begin{tabular}{|c|c|}
 \hline
-& \\Given & A $3\times 3$ matrix  with real entries.\\
-\hline
 & \\
 Statement 1. & A  is necessarily diagonalizable over $\vec{R}$\\
 \hline
 & \\
-False statement& matrix A is diagonalizable if and only if\\ &there is a basis of $\vec{R}^3 $consisting of\\
+False statement& matrix A is diagonalizable if and only if there is a basis of $\vec{R}^3 $consisting of\\
 & eigenvectors of A.\\
-& Counter example : \myvec{
+Example:&Consider a matrix
+$ \myvec{
 1 &1 &0\\
 0&1&1\\
-0&0&4}\\
+0&0&4}$\\
+&Eigen values are:
+ $\myvec{
+1 -\lambda &1 &0\\
+0&1-\lambda&1\\
+0&0&4-\lambda}=0$.
+$\implies\lambda_1=1$,$\lambda_2=4$\\
+ & $\lambda_1=1$ has eigen vector
+ $\myvec{1\\0\\0}$ and 
+  $\lambda_2=4$ has eigen vector
+$\myvec{1\\3\\9}$\\
+ & We have found only two linearly independent eigenvectors for A,Hence not diagonalisable
+\\
 \hline
 & \\
-Statement 2. & If A has distinct real  eigen values\\
-& than  it is diagonalizable over$\vec{R}$\\
+Statement 2. & If A has distinct real  eigen values
+ than  it is diagonalizable over$\vec{R}$\\
 \hline
 &\\
 True statement& A has n linearly independent eigenvectors which implies it is diagonalizable.\\
-Proof & Consider any invertible matrix P with columns $\myvec{v_1,v_2,\cdots,v_n}$ and any diagonal matrix\\
-& D with diagonal entries \myvec{\lambda_1,\lambda_2,\cdots,\lambda_n}\\
-& Now,AP=A\myvec{v_1,v_2,\cdots, v_n}=\myvec{
-Av_1,Av_2,\cdots, Av_n}\\
-&PD=\myvec{v_1,v_2,\cdots,v_n}
-\myvec{\lambda_1&0&\cdots&0\\
+Proof & \textbf{Suppose A is Diagonalizable}.Than,$P^{-1}AP=D$ and hence,AP=PD\\
+& where P is invertible matrix and D is a diagonal matrix.\\
+& D=\myvec{\lambda_1&0&\cdots&0\\
 0&\lambda_2&\cdots&0\\
 \vdots&\vdots&\vdots&\vdots\\
 0&0&\cdots&\lambda_n}
- $\implies$ \myvec{
-\lambda_1v_1 &\lambda_2v_2&\cdots\lambda_nv_n
+ and P=\myvec{
+P_1& P_2&\cdots& P_n
 }\\
-& Suppose that A has n linearly independent eigen vectors. Now,$Av_i=\lambda v_i$. Thus,AP=PD\\
-& Hence we have,$D=P^{-1}AP$
-and  so A  is diagonalisable with diagonalising  matrix P.\\
-& Now  suppose A is diagonalizable . Than there is invertible matrix P and a diagonal\\ 
-& matrix D with entries $\lambda_1,\lambda_2,\cdots,\lambda_n.$ such that $D=P^{-1}AP$
- \\
-&So $P D = AP$ , which means$ Av_i = \lambda_iv_i$ for each $i = 1, 2, \cdots, n$\\
-& that is, each $v_i$  is an
-eigenvector of A.Since P is invertible,\\ 
-& the columns of P form an independent set of vectors,\\ & and therefore\\
-&\textbf{ A has n linearly independent eigenvectors which}\\ & \textbf{implies it is diagonalisable}.\\
+& Since AP=PA$\implies \myvec{
+AP_1 & AP_2&\cdots &AP_n
+}$
+=\myvec{
+\lambda_1P_1&\cdots&\lambda_nP_n
+}
+\\
+& So,$AP_i$=$\lambda_iP_i$ where $i=1,\cdots,n$\\
+& Now,P is invertible .Hence,$P_i$ is eigen vector of A for $\lambda$\\
+& Also rank(P)=n.So it's columns $\myvec{
+P_1&P_2&\cdots&P_n
+}$
+are linearly independent\\
+&\textbf{Now,converse}.\\
+& If\myvec{
+p_1 &p_2&\cdots&p_n 
+}are n independent eigen vectors then,
+ $AP_1=\lambda P_1,\cdots ,AP_n=\lambda P_n$\\
+& D=\myvec{\lambda_1&0&\cdots&0\\
+0&\lambda_2&\cdots&0\\
+\vdots&\vdots&\vdots&\vdots\\
+0&0&\cdots&\lambda_n}
+ and P=\myvec{
+P_1& P_2&\cdots& P_n
+}\\
+& Now, $AP_i=\lambda_iP_i$ $\implies$ $AP=PD$ so,$P^{-1}AP=D$ is a diagonal matrix.\\
 \hline
-
 & \\
-Statement 3.& If all eigen values are non zero than it is\\ & diagonalizable over $\vec{C}$\\
+Statement 3.& If all eigen values are non zero than it is diagonalizable over $\vec{C}$\\
 \hline
 &\\
-True statement& A has n linearly independent\\ & eigenvectors which implies it is diagonalizable.\\
+True statement& A has n linearly independent eigenvectors which implies it is diagonalizable.\\
+&\\
+Example:& A=\myvec{
+4& 0 &-2\\
+2& 5 &4\\
+0& 0 &5
+}$\implies \lambda_1=2,\lambda_2=3 , \lambda_3=6$\\
+& Eigen vectors are:$x_1=\myvec{
+-1\\1\\0
+},
+x_ 2=\myvec{
+1\\1\\1
+},
+x_3=\myvec{
+-1\\ - 1\\ 2
+}$
+respectively\\
 \hline
 & \\
-Statement 4. & If all eigen values are non zero than it is\\ & diagonalizable over $\vec{C}$\\
+Statement 4. & If all eigen values are non zero than it is diagonalizable over $\vec{C}$\\
 \hline
 & \\
-False statement &  matrix A is diagonalizable if and only if\\ &there is a basis of $\vec{R}^3 $consisting of\\
-& eigenvectors of A. \\
+False statement & counter example same as statement 1 ex. eigen values are non zero but not diagonalizable. \\
 \hline
 \end{tabular}
-\caption{Summary}
-\label{table:1}
 \end{center}
 \end{table*}
 \end{document}
