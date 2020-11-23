@@ -292,8 +292,32 @@ Statement 2. & If A has distinct real  eigen values\\
 & than  it is diagonalizable over$\vec{R}$\\
 \hline
 &\\
-True statement& A has n linearly independent\\ & eigenvectors which implies it is diagonalizable.\\
+True statement& A has n linearly independent eigenvectors which implies it is diagonalizable.\\
+Proof & Consider any invertible matrix P with columns $\myvec{v_1,v_2,\cdots,v_n}$ and any diagonal matrix\\
+& D with diagonal entries \myvec{\lambda_1,\lambda_2,\cdots,\lambda_n}\\
+& Now,AP=A\myvec{v_1,v_2,\cdots, v_n}=\myvec{
+Av_1,Av_2,\cdots, Av_n}\\
+&PD=\myvec{v_1,v_2,\cdots,v_n}
+\myvec{\lambda_1&0&\cdots&0\\
+0&\lambda_2&\cdots&0\\
+\vdots&\vdots&\vdots&\vdots\\
+0&0&\cdots&\lambda_n}
+ $\implies$ \myvec{
+\lambda_1v_1 &\lambda_2v_2&\cdots\lambda_nv_n
+}\\
+& Suppose that A has n linearly independent eigen vectors. Now,$Av_i=\lambda v_i$. Thus,AP=PD\\
+& Hence we have,$D=P^{-1}AP$
+and  so A  is diagonalisable with diagonalising  matrix P.\\
+& Now  suppose A is diagonalizable . Than there is invertible matrix P and a diagonal\\ 
+& matrix D with entries $\lambda_1,\lambda_2,\cdots,\lambda_n.$ such that $D=P^{-1}AP$
+ \\
+&So $P D = AP$ , which means$ Av_i = \lambda_iv_i$ for each $i = 1, 2, \cdots, n$\\
+& that is, each $v_i$  is an
+eigenvector of A.Since P is invertible,\\ 
+& the columns of P form an independent set of vectors,\\ & and therefore\\
+&\textbf{ A has n linearly independent eigenvectors which}\\ & \textbf{implies it is diagonalisable}.\\
 \hline
+
 & \\
 Statement 3.& If all eigen values are non zero than it is\\ & diagonalizable over $\vec{C}$\\
 \hline
