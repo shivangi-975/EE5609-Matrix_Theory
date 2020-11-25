@@ -187,21 +187,22 @@ Statement 2. & If A has distinct real  eigen values
 &\\
 True statement& Distinct real eigenvalues implies linearly independent eigenvectors spanning the entire space.\\
 & and if a matrix has n linearly independent vectors than it is  diagonalizable.\\
-Proof  1:& \textbf{Distinct eigen values implies linearly independent vectors that spans entire space.}\\&Consider 3  eigen vectors $\vec{v}$,$\vec{w}$ and $\vec{u}$ with eigen values $\lambda$,$\mu$,$\nu$ respectively.\\
-& such that $\lambda\neq\mu\neq\nu$\\
+Proof  1:& \textbf{Distinct eigen values implies linearly independent vectors that spans entire space.}\\&Consider 2 eigen vectors $\vec{v}$,$\vec{w}$  with eigen values $\lambda$,$\mu$ respectively.\\
+& such that $\lambda\neq\mu$\\
  &\parbox{12cm}{\begin{align}
-    \alpha(\vec{v})+\beta(\vec{w})+\gamma(\vec{u})=0\label{eq2}\\
-     \alpha A(\vec{v})+\beta A(\vec{w})+\gamma A (\vec{u})=0\\
-     \alpha \lambda\vec{v}+\beta\mu\vec{w}+\gamma\nu\vec{u}=0\label{eq3}
+    \alpha(\vec{v})+\beta(\vec{w})=0\label{eq2}\\
+     \alpha A(\vec{v})+\beta A(\vec{w})=0\\
+     \alpha \lambda\vec{v}+\beta\mu\vec{w}=0\label{eq3}
      \end{align}}\\
      & Multiplying $\eqref{eq2}$with -$\lambda$ and subtracting from $\eqref{eq3}$ we have,\\
    & \parbox{12cm}{\begin{align}  
-  \beta(\mu-\lambda)\vec{w}+\gamma(\nu-\lambda)\vec{u}=0 \label{eq1}
+  \beta(\mu-\lambda)\vec{w}=0 \label{eq1}
   \end{align}}\\
-  & Since,eigen values are distinct $(\mu-\lambda)\neq 0 $ and $(\nu-\lambda)\neq 0$.Also,$\vec{w}$ and $\vec{u}$ are eigen vectors$\neq0$\\
-  &  $\implies$ from equation$\eqref{eq1}$ we have, $\beta=\gamma=0$\\
-  & substituting $\beta=\gamma=0$ in  equation $\eqref{eq2}$we have,$\alpha=\beta=\gamma=0$.As, $\vec{v}\neq0$\\
+  & eigen values are distinct $(\mu-\lambda)\neq 0$ .
+  From equation$\eqref{eq1}$ we have, $\beta=0$\\
+  & substituting $\beta=0$ in  equation $\eqref{eq2}$we have,$\alpha=0$.As, $\vec{v}\neq 0$\\
   & \textbf{which proves that vectors are linearly independent}.\\
+  
   Proof 2:
  & \textbf{If a matrix has n linearly independent vectors than it is diagonalizable}\\
  & If\myvec{
